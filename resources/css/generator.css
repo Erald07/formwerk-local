@@ -1,0 +1,12 @@
+canvas#generator-qr {
+	height: auto !important;
+}
+
+.generator-form-variables-available .generator-form-variable-available {
+	background: var(--primary-color);
+	color: #fff;
+	padding: 3px 8px;
+    border-radius: 5px;
+    margin: 0 2px 5px 0;
+    display: inline-block;
+}

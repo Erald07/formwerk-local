@@ -1,0 +1,4072 @@
+.leform, .leform-admin {
+	font-size: 14px;
+	font-family: arial;
+}
+#uap-body .leform-admin {
+	margin: 0;
+}
+.leform-static {
+	position: static !important;
+	margin: 0; height: 100%; overflow: hidden
+}
+.leform-tooltip-content {
+	display: none;
+}
+.leform-fa-noicon:before {
+	content: "-";
+}
+.leform-half {
+	width: 50%;
+}
+.leform-third {
+	width: 33.3333% !important;
+}
+.leform-240 {
+	width: 240px;
+	min-width: 240px;
+}
+.leform-red {
+	color: #c00000;
+}
+.leform-number {
+	width: 100px !important;
+	text-align: right;
+}
+.leform-number input[type="text"]{
+	text-align: right;
+}
+
+/* Dialog Popup - begin */
+.leform-dialog-overlay {
+	position: fixed !important;
+	z-index: 99988;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	width: 100%;
+	background-position: center center;
+	background: rgba(0,0,0,0.8);
+	display: none;
+}
+.leform-dialog {
+	position: fixed !important;
+	box-sizing: border-box;
+	z-index: 99989;
+	top: -3000px;
+	left: 50%;
+	width: 90%;
+	height: 600px;
+	background: #ffffff;
+	transform:translate(-50%, -50%) scale(0);
+	-webkit-transform:translate(-50%, -50%) scale(0);
+	box-shadow: 3px 3px 20px -5px #000000;
+	overflow: hidden;
+	transition-property: transform;
+	transition-timing-function: ease-in-out;
+	transition-duration: 300ms;
+}
+.leform-dialog * {
+	box-sizing: border-box;
+}
+.leform-dialog-inner {
+	height: 600px;
+	position: relative;
+	box-sizing: border-box;
+}
+.leform-dialog-title {
+	box-sizing: border-box;
+	height: 52px;
+	line-height: 52px;
+	padding: 0 0 0 20px;
+	text-align: left;
+	border-bottom: 1px solid #f0f0f0;
+	background: #f8f8f8;
+}
+.leform-dialog-title h3 {
+	font-weight: normal;
+	font-size: 20px;
+	font-family: arial;
+	color: #202020;
+	letter-spacing: 0;
+	text-transform: none;
+	margin: 0 !important;
+	padding: 0 !important;
+	line-height: inherit;
+}
+.leform-dialog-title h3 i {
+	margin-right: 0.5em;
+	line-height: 52px;
+	vertical-align: top;
+}
+.leform-dialog-title h3 label {
+	cursor: default;
+	cursor: default;
+	line-height: 52px;
+	display: inline-block;
+	vertical-align: top;
+}
+.leform-dialog-title a {
+	display: block;
+	float: right;
+	font-size: 20px;
+	width: 52px;
+	height: 52px;
+	color: #202020;
+	text-align: center;
+	text-shadow: none !important;
+	box-shadow: none !important;
+	outline: none !important;
+	border: none !important;
+	margin: 0 0 0 20px !important;
+	padding: 0 !important;
+	transition-property: all;
+	transition-timing-function: ease-in-out;
+	transition-duration: 300ms;
+}
+.leform-dialog-title a:hover {
+	color: var(--primary-color);
+}
+.leform-dialog-content {
+	height: 496px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	background: #ffffff;
+	position: relative;
+	font-size: 15px;
+	line-height: 1.475;
+}
+.leform-dialog-content::-webkit-scrollbar {
+	width: 5px;
+}
+.leform-dialog-content::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+}
+.leform-dialog-content::-webkit-scrollbar-thumb {
+	background-color: var(--primary-color);
+}
+.leform-dialog-content hr {
+	margin: 0 30px;
+}
+.leform-dialog-loading {
+	position: absolute;
+	background: #fff;
+	top: 52px;
+	left: 0;
+	z-index: 99982;
+	width: 100%;
+	bottom: 0;
+	right: 0;
+}
+.leform-dialog-loading i {
+	position: absolute;
+	z-index: 99983;
+	top: 50%;
+	left: 50%;
+	font-size: 24px;
+	margin-top: -12px;
+	margin-left: -12px;
+}
+.leform-dialog-content-html {
+	padding: 30px 50px;
+}
+.leform-dialog-message {
+	text-align: center;
+}
+.leform-dialog-buttons {
+	box-sizing: border-box;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 52px;
+	line-height: 48px;
+	padding-right: 8px;
+	text-align: center;
+	border-top: 1px solid #f0f0f0;
+}
+.leform-dialog-button {
+	display: inline-block;
+	line-height: 40px;
+	height: 40px;
+	min-width: 140px;
+	margin: 0 5px 0px 5px;
+	font-size: 15px;
+	font-weight: 400;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	background-image: none;
+	border: 1px solid transparent;
+	border-radius: 3px;
+	transition-duration: .3s;
+	-webkit-transition-duration: .3s;
+	color: #fff;
+	background: var(--primary-color);
+	border: 1px solid var(--primary-color);
+	text-decoration: none;
+	outline: none;
+	box-shadow: none;
+	box-sizing: border-box;
+	padding: 0 1em;
+}
+.leform-dialog-button-cancel {
+	color: #222;
+	background: #d0d0d0;
+	border: 1px solid #c0c0c0;
+}
+.leform-dialog-button-disabled {
+	opacity: 0.3;
+	cursor: default !important;
+}
+.leform-dialog-button:active {
+	background-image: none;
+	outline: 0;
+	-webkit-box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+	box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+	text-decoration: none;
+	color: #fff;
+	background: var(--primary-color);
+	background-image: none;
+	outline: none;
+	box-shadow: none;
+	transform:translateY(2px);
+	-webkit-transform:translateY(2px);
+}
+.leform-dialog-button:hover, .leform-dialog-button:focus {
+	text-decoration: none;
+	color: #fff;
+	background: var(--primary-color);
+	background-image: none;
+	outline: none;
+	box-shadow: none;
+}
+.leform-dialog-button-cancel:active, .leform-dialog-button-cancel:hover, .leform-dialog-button-cancel:focus {
+	color: #222;
+	background: #c0c0c0;
+}
+.leform-dialog-button label {
+	line-height: 38px;
+	display: inline-block;
+	margin-left: 8px;
+	vertical-align: top;
+	margin-bottom: 0;
+	font-weight: 400;
+}
+.leform-dialog-button i {
+	line-height: 38px;
+	vertical-align: top;
+}
+
+/* Dialog Popup - end */
+
+
+/* Properies Popup begin */
+.leform-admin-popup-overlay {
+	position: fixed !important;
+	z-index: 99980;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	width: 100%;
+	background-position: center center;
+	background: rgba(0,0,0,0.8);
+	display: none;
+}
+#leform-stylemanager-overlay {
+	z-index: 99982;
+}
+.leform-admin-create-overlay {
+	position: fixed !important;
+	z-index: 1001;
+	top: 0px;
+	left: 0px;
+	bottom: 0px;
+	right: 0px;
+	height: 100%;
+	width: 100%;
+	background-position: center center;
+	background: rgba(241,241,241,0.8);
+	display: none;
+	display: block;
+}
+.leform-admin-create {
+	position: fixed !important;
+	box-sizing: border-box;
+	z-index: 99981;
+	top: 50%;
+	left: 50%;
+	width: 480px;
+	height: 190px;
+	background: #ffffff;
+	transform:translate(-50%, -50%);
+	-webkit-transform:translate(-50%, -50%);
+	box-shadow: 3px 3px 20px -5px #000000;
+	overflow: hidden;
+	transition-property: transform;
+	transition-timing-function: ease-in-out;
+	transition-duration: 300ms;
+}
+.leform-admin-create-content {
+	height: 200px;
+	padding: 32px 32px;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	background: #ffffff;
+	position: relative;
+}
+.leform-admin-create-content input, .leform-admin-create-content input:focus, .leform-admin-create-content input:active {
+	font-size: 16px;
+	font-weight: normal;
+	border-radius: 3px;
+	padding: 0 1.6em;
+	line-height: 52px;
+	border: 1px solid #CCC;
+	border-spacing: 0;
+	font-family: arial, verdana;
+	box-sizing: border-box;
+	box-shadow: none;
+	margin: 0;
+	background: #FFF;
+	height: 52px;
+	min-width: 0px;
+	max-width: 100%;
+	outline: none;
+	width: 100%;
+	text-align: center;
+}
+
+.leform-admin-popup {
+	position: fixed !important;
+	box-sizing: border-box;
+	z-index: 99981;
+	top: 50%;
+	left: 50%;
+	width: 90%;
+	height: 600px;
+	background: #ffffff;
+	transform:translate(-50%, -50%);
+	-webkit-transform:translate(-50%, -50%);
+	display: none;
+	box-shadow: 3px 3px 20px -5px #000000;
+	overflow: hidden;
+	transition-property: transform;
+	transition-timing-function: ease-in-out;
+	transition-duration: 300ms;
+}
+#leform-stylemanager {
+	z-index: 99983;
+}
+.leform-admin-popup * {
+	box-sizing: border-box;
+}
+.leform-admin-popup-inner {
+	height: 600px;
+	position: relative;
+	box-sizing: border-box;
+}
+.leform-admin-popup-title {
+	box-sizing: border-box;
+	height: 52px;
+	line-height: 52px;
+	padding: 0 0 0 20px;
+	text-align: left;
+	border-bottom: 1px solid #f0f0f0;
+	background: #f8f8f8;
+}
+.leform-admin-popup-title>span {
+	float: right;
+	display: block;
+	width: 52px;
+	height: 52px;
+	line-height: 52px;
+	text-align: center;
+	font-size: 20px;
+	color: #555;
+	transition-property: color;
+	transition-timing-function: ease-in-out;
+	transition-duration: 300ms;
+	cursor: pointer;
+}
+.leform-admin-popup-title>span.leform-preview-size-mobile {
+	font-size: 20px;
+	width: 40px;
+}
+.leform-admin-popup-title>span:hover,
+.leform-admin-popup-title>span.leform-preview-size-active {
+	color: var(--primary-color);
+}
+.leform-admin-popup-title h3 {
+	font-weight: normal;
+	font-size: 20px;
+	font-family: arial;
+	color: #202020;
+	letter-spacing: 0;
+	text-transform: none;
+	margin: 0 !important;
+	padding: 0 !important;
+	line-height: inherit;
+}
+.leform-admin-popup-title h3 span {
+	font-size: 16px;
+	color: #a0a0a0;
+	display: inline-block;
+	margin-left: 20px;
+	padding-left: 20px;
+	border-left: 1px dashed #e0e0e0;
+	line-height: 25px;
+	height: 25px;
+	vertical-align: middle;
+}
+.leform-admin-popup-title a {
+	display: block;
+	float: right;
+	font-size: 20px;
+	width: 52px;
+	height: 52px;
+	color: #202020;
+	text-align: center;
+	text-shadow: none !important;
+	box-shadow: none !important;
+	outline: none !important;
+	border: none !important;
+	margin: 0 0 0 20px !important;
+	padding: 0 !important;
+	transition-property: all;
+	transition-timing-function: ease-in-out;
+	transition-duration: 300ms;
+}
+.leform-admin-popup-title a:hover {
+	color: var(--primary-color);
+}
+.leform-admin-popup-content {
+	height: 496px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	background: #ffffff;
+	position: relative;
+}
+.leform-admin-popup-content::-webkit-scrollbar {
+	width: 5px;
+}
+.leform-admin-popup-content::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+}
+.leform-admin-popup-content::-webkit-scrollbar-thumb {
+	background-color: var(--primary-color);
+}
+.leform-admin-popup-content hr {
+	margin: 0 30px;
+}
+.leform-admin-popup-loading {
+	position: absolute;
+	background: #fff;
+	top: 52px;
+	left: 0;
+	z-index: 99982;
+	width: 100%;
+	bottom: 0;
+	right: 0;
+}
+.leform-admin-popup-loading i {
+	position: absolute;
+	z-index: 99983;
+	top: 50%;
+	left: 50%;
+	font-size: 24px;
+	margin-top: -12px;
+	margin-left: -12px;
+}
+.leform-admin-popup-content-form {
+}
+.leform-admin-popup-buttons {
+	box-sizing: border-box;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 52px;
+	line-height: 48px;
+	padding-right: 8px;
+	text-align: right;
+	border-top: 1px solid #f0f0f0;
+}
+.leform-properties-item {
+	display: table;
+	margin: 20px 0;
+	width: 100%;
+}
+.leform-properties-noitem {
+	display: table;
+	margin: 20px 0;
+	width: 100%;
+}
+
+.leform-properties-label {
+	display: table-cell;
+	font-size: 15px;
+	width: 200px;
+	min-width: 200px;
+	vertical-align: top;
+	padding: 0 1em 0 2em;
+}
+.leform-properties-label label {
+	font-weight: 400;
+	margin-bottom: 0;
+}
+.leform-properties-tooltip {
+	display: table-cell;
+	font-size: 18px;
+	width: 2em;
+	min-width: 2em;
+	text-align: center;
+	vertical-align: top;
+}
+.leform-tooltip {
+	font-size: 14px !important;
+	line-height: 1.3 !important;
+	z-index: 99999 !important;
+}
+.leform-tooltip pre {
+	margin-bottom: 0 !important;
+}
+div.leform-properties-line {
+	display: table;
+	vertical-align: top;
+	position: relative;
+	margin-bottom: 10px;
+	padding-left: 0px !important;
+}
+.leform-properties-content>div.leform-properties-line:last-of-type {
+	margin-bottom: 0;
+}
+.leform-properties-content,
+.leform-properties-group {
+	width: 100%;
+	vertical-align: top;
+	font-size: 14px;
+}
+.leform-properties-content {
+	padding-right: 20px;
+	display: table-cell;
+	position: relative;
+}
+.leform-properties-group {
+	display: table;
+}
+.leform-properties-content>div,
+.leform-properties-group>div,
+.leform-properties-line>div {
+	padding-left: 10px;
+	vertical-align: top;
+	position: relative;
+}
+.leform-properties-content>div:first-of-type,
+.leform-properties-group>div:first-of-type,
+.leform-properties-line>div:first-of-type {
+	padding-left: 0;
+}
+.leform-properties-content-two-third {
+	display: table-cell;
+	width: 67%;
+}
+.leform-properties-content-half {
+	display: table-cell;
+	width: 50%;
+}
+.leform-properties-content-quarter {
+	display: table-cell;
+	width: 25%;
+}
+.leform-properties-content-third {
+	display: table-cell;
+	width: 33%;
+}
+.leform-properties-content-dime {
+	display: table-cell;
+	width: 10%;
+}
+.leform-properties-content-9dimes {
+	display: table-cell;
+	width: 90%;
+}
+.leform-properties-content-third>label, .leform-properties-content-two-third>label, .leform-properties-content-half>label, .leform-properties-content-quarter>label, .leform-properties-content-dime>label, .leform-properties-content-9dimes>label {
+	color: #ccc;
+	font-size: 14px;
+	font-style: italic;
+	cursor: default;
+	display: block;
+}
+
+.leform-style-save-row {
+	margin-bottom: 1em;
+}
+.leform-style-save-row label {
+	display: block;
+	cursor: default;
+}
+.leform-style-save-row input[type="text"], .leform-style-save-row select,
+.leform-properties-content input[type="text"], .leform-properties-content select, .leform-properties-content input[type="email"], .leform-properties-content input[type="password"], .leform-properties-content textarea, .leform-bulk-editor textarea {
+	font-size: 15px;
+	font-weight: normal;
+	border-radius: 3px;
+	padding: 0 0.8em;
+	line-height: 40px;
+	border: 1px solid #CCC;
+	border-spacing: 0;
+	font-family: arial, verdana;
+	box-sizing: border-box;
+	box-shadow: none;
+	margin: 0;
+	/* background: #FFF; */
+	height: 40px;
+	min-width: 0px;
+	max-width: 100%;
+	outline: none;
+	width: 100%;
+}
+.leform-properties-content select {
+	height: 40px !important;
+	font-size: 15px !important;
+}
+.leform-properties-content textarea {
+	height: 10em !important;
+	line-height: 1.4;
+	padding: 0.4em 0.8em;
+}
+.leform-properties-content textarea.leform-tinymce {
+	height: 16em !important;
+}
+.leform-properties-content input[type="text"]:focus, .leform-properties-content select:focus, .leform-properties-content textarea:focus, .leform-bulk-editor textarea:focus {
+	border-color: var(--primary-color);
+	box-shadow: 0 0 16px -10px var(--primary-color);
+}
+.leform-properties-content input::-webkit-input-placeholder, .leform-properties-content textare::-webkit-input-placeholder {
+   color: inherit !important;
+   opacity: 0.3;
+}
+.leform-properties-content input::-moz-placeholder, .leform-properties-content textare::-moz-placeholder {
+   color: inherit !important;
+   opacity: 0.3;
+}
+.leform-properties-content input:-moz-placeholder, .leform-properties-content textare:-mox-placeholder {
+   color: inherit !important;
+   opacity: 0.3;
+}
+.leform-properties-content input:-ms-input-placeholder, .leform-properties-content textare::-ms-input-placeholder {
+   opacity: 0.3;
+   color: inherit !important;
+}
+.leform-properties-content .leform-input-units {
+	position: relative;
+	min-width: 100px;
+}
+.leform-properties-content .leform-100px {
+	min-width: 100px;
+	width: 100px;
+	max-width: 100px;
+}
+.leform-properties-content .leform-input-units::after {
+	position: absolute;
+	color: #ccc;
+	font-size: 13px;
+	line-height: 40px;
+	top: 0;
+	right: 5px;
+}
+.leform-properties-content .leform-input-px::after {
+	content: 'px';
+}
+.leform-properties-content .leform-input-mb::after {
+	content: 'Mb';
+}
+.leform-properties-content .leform-input-chars::after {
+	content: 'chars';
+}
+.leform-properties-content .leform-input-px input {
+	padding-right: 24px;
+}
+.leform-properties-content .leform-input-mb input {
+	padding-right: 28px;
+}
+.leform-properties-content .leform-input-chars input {
+	padding-right: 40px;
+}
+.leform-properties-content .leform-media-id {
+	position: relative;
+}
+.leform-properties-content .leform-media-id input,
+.leform-properties-content .leform-image-url input,
+.leform-properties-content .leform-date>input,
+.leform-properties-content .leform-time>input {
+	padding-right: 40px;
+}
+#uap-body .leform-properties-content .leform-image-url input {
+	padding-right: 0.8em !important;
+}
+.leform-properties-content .leform-media-id span,
+.leform-properties-content .leform-image-url span,
+.leform-properties-content .leform-date>span,
+.leform-properties-content .leform-time>span,
+.leform-properties-content .leform-input-shortcode-selector span {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	color: #888;
+	cursor: pointer !important;
+	transition-duration: .3s;
+	-webkit-transition-duration: .3s;
+}
+#uap-body .leform-properties-content .leform-image-url span {
+	display: none !important;
+}
+.leform-properties-content .leform-media-id span i,
+.leform-properties-content .leform-image-url span i,
+.leform-properties-content .leform-date>span i,
+.leform-properties-content .leform-time>span i,
+.leform-properties-content .leform-input-shortcode-selector span i {
+	font-size: 20px;
+	line-height: 40px;
+}
+.leform-properties-content .leform-input-shortcode-selector span i.fa-code {
+	font-size: 16px;
+}
+
+.leform-properties-content .leform-media-id span:hover,
+.leform-properties-content .leform-image-url span:hover,
+.leform-properties-content .leform-date>span:hover,
+.leform-properties-content .leform-time>span:hover,
+.leform-properties-content .leform-input-shortcode-selector span:hover {
+	color: var(--primary-color);
+}
+
+
+.leform-properties-content .wp-picker-container {
+	position: relative;
+	white-space: nowrap;
+}
+.leform-properties-content .wp-picker-container .wp-color-result.button {
+	height: 40px;
+	width: 40px;
+	padding: 0;
+	margin: 0 6px 0 0;
+	font-size: 15px;
+	border-color: #ccc;
+	box-shadow: none;
+	display: inline-block;
+}
+.leform-properties-content .wp-picker-container .wp-color-result.button span {
+	display: none;
+	line-height: 38px;
+}
+.leform-properties-content .wp-picker-container .wp-color-result.button:active,
+.leform-properties-content .wp-picker-container .wp-color-result.button:focus {
+	box-shadow: none;
+	border-color: #ccc;
+}
+.leform-properties-content .wp-picker-container input[type=text].wp-color-picker {
+	font-size: 15px;
+	width: 150px !important;
+	font-family: arial;
+}
+.leform-properties-content .wp-picker-container .wp-picker-input-wrap input[type=button] {
+	display: none;
+}
+.leform-properties-content .wp-picker-container .wp-picker-holder {
+	position: absolute;
+	z-index: 999999;
+	right: 0;
+}
+.leform-properties-content .wp-picker-container .wp-picker-holder .iris-picker {
+	border-radius: 3px;
+}
+.leform-properties-content-color .wp-picker-container .wp-picker-holder {
+	right: auto;
+	left: 0;
+}
+.leform-fa-selector-button {
+	display: inline-block;
+	font-family: arial;
+	font-weight: 400;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	cursor: pointer;
+	-webkit-user-select: none;
+	user-select: none;
+	background-image: none;
+	border-radius: 3px;
+	transition-duration: .3s;
+	-webkit-transition-duration: .3s;
+	color: #444444;
+	border: 1px solid #ccc;
+	text-decoration: none;
+	outline: none;
+	box-shadow: none;
+	width: 80px;
+	height: 40px;
+}
+.leform-fa-selector-button i {
+	display: block;
+	font-size: 18px;
+	line-height: 40px;
+}
+.leform-fa-selector-button:active {
+	background-image: none;
+	outline: 0;
+	text-decoration: none;
+	border-color: var(--primary-color);
+	color: var(--primary-color);
+	background-image: none;
+	outline: none;
+	box-shadow: none;
+	transform:translateY(2px);
+	-webkit-transform:translateY(2px);
+}
+.leform-fa-selector-button:hover, .leform-fa-selector-button:focus {
+	text-decoration: none;
+	color: var(--primary-color);
+	border-color: var(--primary-color);
+	background-image: none;
+	outline: none;
+	box-shadow: none;
+}
+input[type="checkbox"].leform-checkbox-toggle {
+	display: none !important;
+}
+input[type="checkbox"].leform-checkbox-toggle+label {
+	appearance: none;
+	width: 64px;
+	height: 32px;
+	border: 1px solid #ccc;
+	border-radius: 32px;
+	background: #ffffff;
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+	vertical-align: middle;
+	transition: background 0.3s;
+	box-sizing: border-box;
+	outline: none;
+	box-shadow: none;
+	cursor: pointer;
+	margin: 0;
+	padding: 0;
+}
+input[type="checkbox"].leform-checkbox-toggle+label:before {
+	content: '';
+}
+input[type="checkbox"].leform-checkbox-toggle+label:after {
+	content: '';
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	width: 26px;
+	height: 26px;
+	background: #ccc;
+	border: none;
+	border-radius: 26px;
+	transition: left 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+input[type="checkbox"].leform-checkbox-toggle:checked+label {
+	background: var(--primary-color);
+	border-color: var(--primary-color);
+}
+input[type="checkbox"].leform-checkbox-toggle:checked+label:after {
+	left: 34px;
+	background: #fff;
+}
+input[type="checkbox"].leform-checkbox-toggle:disabled+label {
+	opacity: 0.5;
+}
+.leform-properties-sub-item {
+	padding: 0px;
+	margin-bottom: 10px;
+	background: #f8f8f8;
+	border-radius: 3px;
+	border: 1px solid #ccc;
+}
+.leform-properties-sub-item-new {
+	display: none;
+}
+.leform-properties-sub-item-exist .leform-properties-sub-item-body {
+	display: none;
+}
+.leform-properties-sub-item-body hr {
+	margin: 0 20px;
+}
+.leform-properties-sub-item-body-loading {
+	padding: 1em 0 2em 0;
+	text-align: center;
+}
+.leform-properties-sub-item-body-loading i {
+	font-size: 24px;
+}
+.leform-properties-sub-item .leform-properties-label {
+	min-width: 160px;
+	padding: 0 1em 0 1em;
+}
+.leform-properties-sub-item-header {
+	padding: 1em;
+	font-size: 15px;
+	line-height: 24px;
+}
+.leform-properties-sub-item-header div.leform-properties-sub-item-header-tools {
+	float: right;
+	line-height: 24px;
+}
+.leform-properties-sub-item-header div.leform-properties-sub-item-header-tools span {
+	margin-left: 10px;
+	cursor: pointer;
+	font-size: 18px;
+	color: #888;
+	vertical-align: middle;
+}
+.leform-properties-sub-item-header div.leform-properties-sub-item-header-tools span i {
+	vertical-align: top;
+	line-height: 24px;
+	transition-duration: .3s;
+	-webkit-transition-duration: .3s;
+}
+.leform-properties-sub-item-header div.leform-properties-sub-item-header-tools span i.fa-cog {
+	color: #444;
+}
+.leform-properties-sub-item-header div.leform-properties-sub-item-header-tools span:hover i,
+.leform-properties-sub-item-header div.leform-properties-sub-item-header-tools span:hover i.fa-cog {
+	color: var(--primary-color);
+}
+.leform-properties-sub-item-header label {
+	font-weight: bold;
+	font-style: italic;
+	vertical-align: top;
+	display: inline-block;
+	height: 24px;
+}
+.leform-properties-content-validators-allowed a,
+.leform-properties-content-filters-allowed a {
+	margin-bottom: 0.3em;
+}
+.leform-properties-css-toolbar {
+	margin-top: 5px;
+}
+.leform-properties-css-toolbar span {
+	color: #fff;
+	background-color: #444;
+	vertical-align: top;
+	margin: 0;
+	text-align: center;
+	line-height: 28px;
+	height: 28px;
+	width: 28px;
+	font-size: 14px;
+	cursor: pointer;
+	display: inline-block;
+	transition-duration: .3s;
+	-webkit-transition-duration: .3s;
+}
+.leform-properties-css-toolbar span:first-of-type {
+	border-radius: 3px 0 0 3px;
+}
+.leform-properties-css-toolbar span:last-of-type {
+	border-radius: 0 3px 3px 0;
+}
+.leform-properties-css-toolbar span:hover {
+	color: #fff;
+	background-color: var(--primary-color);
+}
+.leform-properties-options-box {
+	border-top: 1px solid #ccc;
+	border-bottom: 3px solid var(--primary-color);
+	min-height: 180px;
+	height: 240px;
+}
+.leform-properties-options-container {
+	overflow-x: hidden;
+	overflow-y: scroll;
+	height: 100%;
+}
+.leform-properties-options-container::-webkit-scrollbar {
+	width: 5px;
+}
+.leform-properties-options-container::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 6px rgba(255,255,255,0.1);
+}
+.leform-properties-options-container::-webkit-scrollbar-thumb {
+	background-color: var(--primary-color);
+}
+.leform-properties-options-item {
+	padding: 10px;
+	margin-top: 10px;
+	margin-right: 10px;
+	background: #f8f8f8;
+	border-radius: 3px;
+	border: 1px solid #ccc;
+}
+.leform-properties-options-item:last-of-type {
+	margin-bottom: 10px;
+}
+.leform-properties-options-item-placeholder {
+	padding: 10px;
+	margin-top: 10px;
+	margin-right: 10px;
+	background: transparent;
+	border-radius: 3px;
+	border: 1px dashed #ccc;
+}
+.leform-properties-options-item i.fa-check {
+	color: #ccc !important;
+}
+.leform-properties-options-item-default i.fa-check {
+	color: var(--primary-color) !important;
+}
+.leform-properties-options-table,
+.leform-properties-options-table-header {
+	display: table;
+	width: 100%;
+}
+.leform-properties-options-table-header {
+	padding: 0 50px 5px 10px;
+	margin: 0 20px;
+}
+.leform-properties-options-table-footer {
+	text-align: right;
+	margin-top: 5px;
+}
+.leform-properties-options-table-footer a {
+	margin-left: 5px;
+}
+.leform-properties-options-table-footer-left {
+	display: table-cell;
+	text-align: left;
+	vertical-align: middle;
+	font-size: 15px;
+	font-style: italic;
+}
+.leform-properties-options-table-footer-right {
+	display: table-cell;
+	text-align: right;
+	vertical-align: middle;
+}
+.leform-properties-options-table>div {
+	display: table-cell;
+	width: 33.3333%;
+	padding-right: 10px;
+	text-align: right;
+	vertical-align: middle;
+	font-size: 16px;
+	position: relative;
+}
+.leform-properties-options-table>div.leform-image-url span {
+	margin-right: 10px;
+}
+.leform-properties-image-options-table .leform-properties-options-table>div {
+	width: 25%;
+}
+.leform-properties-options-table-header>div {
+	display: table-cell;
+	width: 33.3333%;
+	text-align: left;
+	vertical-align: middle;
+	font-size: 16px;
+	font-style: italic;
+}
+.leform-properties-image-options-table .leform-properties-options-table-header>div {
+	width: 25%;
+}
+.leform-properties-options-table>div:last-of-type {
+	padding-right: 0;
+}
+.leform-properties-options-table>div span {
+	margin-left: 10px;
+	color: #888;
+	cursor: pointer;
+	transition-duration: .3s;
+	-webkit-transition-duration: .3s;
+}
+.leform-properties-options-table>div span:hover {
+	color: var(--primary-color);
+}
+.leform-properties-options-table>div span:last-of-type {
+	cursor: move;
+	cursor: -webkit-grab;
+	cursor: grab;
+}
+.leform-properties-options-table>div input[type='text'] {
+	font-size: 14px;
+	padding: 0.6em 0.6em;
+}
+.leform-properties-options-table>div.leform-image-url input[type='text'] {
+	padding-right: 40px;
+}
+.leform-properties-preview-option {
+	position: relative;
+	padding: 0 !important;
+	width: 100px;
+	height: 100px;
+	line-height: 100px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	display: inline-block;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	text-align: center;
+	transition-duration: .3s;
+	-webkit-transition-duration: .3s;
+	vertical-align: top;
+}
+input[type="radio"].leform-radio-image {
+	display: none !important;
+}
+input[type="radio"].leform-radio-image+label {
+	appearance: none;
+	display: inline-block;
+	border: 1px solid #c0c0c0;
+	border-radius: 5px;
+	box-sizing: border-box;
+	margin: 0 10px 10px 0;
+	-moz-filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+	-o-filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+	-webkit-filter: grayscale(100%);
+	filter: gray;
+	filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+	background-position: center center;
+	background-repeat: no-repeat;
+	transition-property: border, filter;
+	-webkit-transition-property: border, filter;
+	transition-duration: .3s;
+	-webkit-transition-duration: .3s;
+}
+input[type="radio"].leform-radio-image:checked+label {
+	border: 2px solid var(--primary-color);
+	-moz-filter: none;
+	-o-filter: none;
+	-webkit-filter: none;
+	filter: none;
+	filter: none;
+}
+
+.leform-properties-preview-option>input[type="radio"] {
+	display: none !important;
+}
+.leform-properties-preview-option>input[type="radio"]+label {
+	appearance: none;
+	font-size: 24px;
+	line-height: 24px;
+	width: 24px;
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	color: #ccc;
+	cursor: pointer;
+	text-align: left;
+	z-index: 999;
+}
+.leform-properties-preview-option>input[type="radio"]+label:before {
+	content: '';
+}
+.leform-properties-preview-option>input[type="radio"]+label:after {
+	content: "\f0c8";
+}
+.leform-properties-preview-option>input[type="radio"]:checked+label:after {
+	content: "\f14a" !important;
+	color: var(--primary-color);
+}
+.leform-properties-preview-option:hover {
+	border: 1px solid var(--primary-color);
+}
+.leform-properties-preview-option:hover>input[type="radio"]+label:after {
+	color: var(--primary-color);
+}
+.leform-properties-preview-option>div {
+	position: relative;
+}
+
+input[type="checkbox"].leform-properties-tile {
+	display: none !important;
+}
+input[type="checkbox"].leform-properties-tile+label {
+	display: inline-block;
+	white-space: nowrap;
+	border: 1px solid #CCC;
+	border-radius: 5px;
+	cursor: pointer;
+	box-sizing: border-box;
+	margin: 2px;
+	padding: 0.6em 1.2em;
+	transition-duration: .3s;
+	transition-property: border;
+}
+input[type="checkbox"].leform-properties-tile:checked+label,
+input[type="checkbox"].leform-properties-tile+label:hover {
+	border-color: var(--primary-color);
+}
+input[type="checkbox"].leform-properties-tile:checked+label {
+	background-color: var(--primary-color);
+	color: #ffffff;
+}
+
+.leform-bar-options,
+.leform-bar-selector {
+	color: #444;
+	white-space: nowrap;
+	display: inline-block;
+}
+.leform-bar-selector input[type="radio"],
+.leform-bar-selector input[type="checkbox"] {
+	display: none !important;
+}
+.leform-bar-selector input[type="radio"]+label:before,
+.leform-bar-selector input[type="radio"]+label:after,
+.leform-bar-selector input[type="checkbox"]+label:before,
+.leform-bar-selector input[type="checkbox"]+label:after {
+	content: '';
+}
+.leform-bar-options span,
+.leform-bar-selector input[type="radio"]+label,
+.leform-bar-selector input[type="checkbox"]+label {
+	appearance: none;
+	line-height: 40px;
+	display: inline-block;
+	min-width: 40px;
+	height: 40px;
+	text-align: center;
+	padding: 0 5px;
+	cursor: pointer;
+	border: 1px solid #ccc;
+	border-left: none;
+	border-right: none;
+	transition-duration: .3s;
+	-webkit-transition-duration: .3s;
+}
+.leform-bar-options span i,
+.leform-bar-selector input[type="radio"]+label i,
+.leform-bar-selector input[type="checkbox"]+label i {
+	line-height: 40px;
+	vertical-align: middle;
+}
+.leform-bar-options span:first-of-type,
+.leform-bar-selector input[type="radio"]+label:first-of-type,
+.leform-bar-selector input[type="checkbox"]+label:first-of-type {
+	border-radius: 3px 0 0 3px;
+	border-left: 1px solid #ccc;
+}
+.leform-bar-options span:last-of-type,
+.leform-bar-selector input[type="radio"]+label:last-of-type,
+.leform-bar-selector input[type="checkbox"]+label:last-of-type {
+	border-radius: 0 3px 3px 0;
+	border-right: 1px solid #ccc;
+}
+.leform-bar-options span.leform-bar-option-selected,
+.leform-bar-selector input[type="radio"]:checked+label,
+.leform-bar-selector input[type="checkbox"]:checked+label,
+.leform-bar-options span:hover,
+.leform-bar-selector input[type="radio"]+label:hover,
+.leform-bar-selector input[type="radio"]:checked+label,
+.leform-bar-selector input[type="checkbox"]+label:hover,
+.leform-bar-selector input[type="checkbox"]:checked+label {
+	border-color: var(--primary-color);
+	background: var(--primary-color);
+	color: #fff;
+	opacity: 0.9;
+}
+.leform-bar-options span:hover,
+.leform-bar-selector input[type="radio"]+label:hover,
+.leform-bar-selector input[type="checkbox"]+label:hover {
+	opacity: 0.7;
+}
+.leform-bar-options span.leform-bar-option-selected:hover,
+.leform-bar-selector input[type="radio"]:checked+label:hover,
+.leform-bar-selector input[type="checkbox"]:checked+label:hover {
+	opacity: 1;
+}
+.leform-properties-content-slider {
+	padding-left: 20px !important;
+	padding-right: 10px !important;
+}
+.leform-slider-container {
+	min-width: 200px;
+	height: 40px;
+	padding-top: 15px;
+}
+.leform-slider.ui-slider {
+	border: 1px solid #ccc !important;
+}
+.leform-slider .ui-slider-handle {
+	width: 3em !important;
+	height: 24px !important;
+	top: 50% !important;
+	margin-top: -12px !important;
+	text-align: center !important;
+	margin-left: -1.5em !important;
+	background: var(--primary-color) !important;
+	color: #fff !important;
+	font-size: 12px !important;
+	line-height: 24px !important;
+	border-color: var(--primary-color) !important;
+}
+.leform-col-width {
+	padding-left: 0 !important;
+	display: table;
+	width: 100%;
+}
+.leform-col-width label {
+	display: table-cell;
+	max-width: 40px;
+	min-width: 40px;
+	width: 40px;
+	margin-bottom: 0;
+	font-weight: 400;
+}
+.leform-col-width>div {
+	display: table-cell;
+	width: 100%
+}
+.leform-properties-content .mce-tinymce {
+	box-shadow: none !important;
+}
+.leform-properties-content .mce-tinymce .mce-top-part::before {
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+.leform-properties-content .wp-editor-container {
+	box-shadow: none;
+}
+.leform-properties-content .mce-notification-inner {
+	z-index: 9999999;
+}
+.leform-properties-content .wp-editor-container textarea {
+	border: none;
+}
+.leform-properties-content .wp-editor-tabs * {
+	box-sizing: content-box;
+}
+.leform-properties-content .mce-btn.mce-active button, .leform-properties-content .mce-btn.mce-active:hover button, .leform-properties-content .mce-btn.mce-active i, .leform-properties-content .mce-btn.mce-active:hover i {
+	color: #444;
+}
+.leform-properties-content .wp-core-ui {
+	padding-left: 0 !important;
+}
+.leform-shortcode-selector .leform-shortcode-selector-button {
+	width: 36px;
+	height: 36px;
+	position: absolute;
+	left: -36px;
+	top: 109px;
+	background: #f5f5f5;
+	color: #444;
+	border: 1px solid #ddd;
+	border-right: none;
+	border-radius: 3px 0 0 3px;
+	line-height: 36px;
+	text-align: center;
+	font-size: 16px;
+	cursor: pointer;
+	transition-duration: .3s;
+	-webkit-transition-duration: .3s;
+}
+.leform-shortcode-selector .leform-shortcode-selector-button:hover,
+.leform-shortcode-selector:hover .leform-shortcode-selector-button {
+	background: #fff;
+	border-color: #f5f5f5;
+	color: var(--primary-color);
+}
+.leform-properties-content.leform-wysiwyg .leform-shortcode-selector {
+	height: 100%;
+	position: absolute !important;
+	left: 0;
+	top: 0;
+}
+.leform-input-shortcode-selector {
+	position: relative;
+}
+.leform-input-shortcode-selector .leform-shortcode-selector {
+	height: 100%;
+	position: absolute !important;
+	right: 0;
+	top: 0;
+}
+.leform-input-shortcode-selector input, .leform-input-shortcode-selector textarea {
+	padding-right: 40px !important;
+}
+.leform-shortcode-selector ul {
+	width: 200px;
+	position: absolute;
+	background: #fff;
+	color: #444;
+	border: 1px solid #ddd;
+	display: none;
+	padding-left: 0;
+	padding: 0;
+	margin: 0;
+	z-index: 9;
+	box-shadow: 2px 2px 10px -7px rgba(0,0,0,0.9);
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+.leform-shortcode-selector ul.leform-shortcode-selector-list-wysiwyg {
+	max-height: 100%;
+	left: 0;
+	top: 0;
+}
+.leform-shortcode-selector ul.leform-shortcode-selector-list-input {
+	right: 40px;
+	top: -120px;
+	max-height: 280px;
+}
+.leform-shortcode-selector:hover ul {
+	display: block;
+}
+.leform-shortcode-selector ul::-webkit-scrollbar {
+	width: 5px;
+}
+.leform-shortcode-selector ul::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+}
+.leform-shortcode-selector ul::-webkit-scrollbar-thumb {
+	background-color: var(--primary-color);
+}
+.leform-shortcode-selector ul li.leform-shortcode-selector-group {
+	margin: 0;
+	padding: 0.7em 0.8em 0.3em 0.8em;
+	color: #444;
+	background: #fff;
+	font-size: 14px;
+	font-weight: bold;
+}
+.leform-shortcode-selector ul li.leform-shortcode-selector-list-item {
+	margin: 0;
+	padding: 0.5em 0.5em 0.5em 1.5em;
+	color: #444;
+	background: #fff;
+	font-size: 14px;
+	cursor: pointer;
+	transition-duration: .3s;
+	-webkit-transition-duration: .3s;
+}
+.leform-shortcode-selector ul li.leform-shortcode-selector-list-item:hover {
+	background: var(--primary-color);
+	color: #fff;
+}
+.leform-shortcode-selector ul li.leform-shortcode-selector-list-item:active {
+	transform: scale(0.95);
+}
+.leform-shortcode-selector-list-item-form-data {
+	display: none;
+}
+.leform-properties-content-notifications .leform-shortcode-selector-list-item-form-data {
+	display: block;
+}
+.leform-shortcode-selector-list-input>li.leform-shortcode-selector-list-item-form-data {
+	display: none !important;
+}
+
+.leform-properties-logic-header {
+	margin-bottom: 10px;
+}
+.leform-properties-logic-buttons {
+	border-top: 3px solid var(--primary-color);
+	padding-top: 5px;
+	text-align: right;
+}
+.leform-properties-logic-rules {
+	padding: 0 !important;
+}
+.leform-properties-logic-rule {
+	padding: 10px;
+	margin-bottom: 10px;
+	background: #f8f8f8;
+	border-radius: 3px;
+	border: 1px solid #ccc;
+}
+.leform-properties-logic-rule-table {
+	display: table;
+	width: 100%;
+}
+.leform-properties-logic-rule-table>div {
+	display: table-cell;
+	width: 33.3333%;
+	padding-right: 10px;
+	text-align: right;
+	vertical-align: middle;
+	font-size: 16px;
+}
+.leform-properties-logic-rule-table>div:last-of-type {
+	padding-right: 0;
+}
+.leform-properties-logic-rule-table>div span {
+	margin-left: 10px;
+	color: #888;
+	cursor: pointer;
+	transition-duration: .3s;
+	-webkit-transition-duration: .3s;
+}
+.leform-properties-logic-rule-table>div span:hover {
+	color: var(--primary-color);
+}
+.leform-properties-inline-error {
+	display: inline-block;
+	line-height: 1.4;
+	border-radius: 4px;
+	padding: 0;
+	box-shadow: 1px 1px 10px -4px #000;
+	font-size: 15px;
+	color: #fff;
+	font-weight: normal;
+	font-style: normal;
+	text-decoration: none;
+	text-align: left;
+	background-color: #d9534f;
+	padding: 1em 1.5em !important;
+}
+.leform-properties-content-confirmations {
+	margin-top: 10px;
+}
+.leform-properties-content-notifications {
+	margin-top: 10px;
+}
+.leform-properties-content-integrations {
+	margin-top: 10px;
+}
+.leform-properties-content-payment-gateways {
+	margin-top: 10px;
+}
+.leform-properties-sub-item-placeholder {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background: transparent;
+	border-radius: 3px;
+	border: 1px dashed #ccc;
+}
+.leform-properties-attachment-buttons {
+	padding-left: 0 !important;
+}
+.leform-properties-attachments {
+	padding: 0 !important;
+}
+.leform-properties-attachment {
+	padding: 10px;
+	margin-bottom: 10px;
+	background: #f8f8f8;
+	border-radius: 3px;
+	border: 1px solid #ccc;
+}
+.leform-properties-attachment-table {
+	display: table;
+	width: 100%;
+}
+.leform-properties-attachment-table>div {
+	display: table-cell;
+	width: 50%;
+	padding-right: 10px;
+	text-align: right;
+	vertical-align: middle;
+	font-size: 16px;
+}
+.leform-properties-attachment-table>div:last-of-type {
+	padding-right: 0;
+}
+.leform-properties-attachment-table>div span {
+	margin-left: 10px;
+	color: #888;
+	cursor: pointer;
+	transition-duration: .3s;
+	-webkit-transition-duration: .3s;
+}
+.leform-properties-attachment-table>div span:hover {
+	color: var(--primary-color);
+}
+.leform-properties-attachment-table>div input[type='text'], .leform-properties-attachment-table>div select {
+	font-size: 14px !important;
+	padding: 0.6em 0.6em;
+}
+.leform-properties-attachment-table div.leform-media-id input[type='text'] {
+	padding-right: 40px;
+}
+/* Properies Popup - end */
+
+/* Tabs - begin */
+.leform-tabs {
+	border-bottom: 1px solid #ccc;
+	margin: 0;
+	padding-top: 9px;
+	padding-bottom: 0;
+	padding-left: 20px;
+	line-height: inherit;
+	display: block !important;
+}
+.leform-tabs:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+.leform-tab {
+	float: left;
+	border: 1px solid #ccc;
+	border-bottom: none;
+	margin-left: .5em;
+	padding: 0.3em 0.9em;
+	border-radius: 5px 5px 0 0;
+	font-size: 15px;
+	font-weight: 700;
+	line-height: 24px;
+	background: #f8f8f8;
+	color: #555;
+	text-decoration: none !important;
+	outline: none !important;
+	box-shadow: none !important;
+	transition-property: background;
+	transition-duration: .3s;
+	-webkit-transition-duration: .3s;
+}
+.leform-tab:focus, .leform-tab:focus:active, .leform-tab:hover {
+	background: #ffffff;
+	color: #555;
+}
+.leform-tabs-main .leform-tab:focus, .leform-tabs-main .leform-tab:focus:active, .leform-tabs-main .leform-tab:hover {
+	background: #f1f1f1;
+	color: #555;
+}
+.leform-tab-active, .leform-tab-active:focus, .leform-tab-active:focus:active, .leform-tab-active:hover {
+	border-bottom: 1px solid #ffffff;
+	background: #ffffff;
+	color: #555;
+}
+.leform-tabs-main .leform-tab-active, .leform-tabs-main .leform-tab-active:focus, .leform-tabs-main .leform-tab-active:focus:active, .leform-tabs-main .leform-tab-active:hover {
+	border-bottom: 1px solid #f1f1f1;
+	background: #f1f1f1;
+	color: #555;
+}
+.leform-tab-active {
+	margin-bottom: -1px;
+	color: #444;
+}
+.leform-tab-active, .leform-tab:focus:active {
+	box-shadow: none;
+}
+.leform-tab-content {
+	display: none;
+	position: relative;
+}
+/* Tabs - end */
+
+/* Sections - begin */
+.leform-sections {
+	margin: 0;
+	margin-top: 20px;
+	padding-bottom: 0;
+	padding-left: 20px;
+	line-height: inherit;
+	font-weight: normal;
+}
+.leform-sections a {
+	display: inline-block;
+	font-family: arial;
+	padding: 0.6em 1em;
+	font-size: 14px;
+	line-height: 1.4;
+	font-weight: 400;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
+	cursor: pointer;
+	-webkit-user-select: none;
+	user-select: none;
+	background-image: none;
+	color: #444;
+	background: #f0f0f0;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	transition-duration: .3s;
+	-webkit-transition-duration: .3s;
+	text-decoration: none;
+	outline: none;
+	box-shadow: none;
+	margin-right: 10px;
+}
+.leform-sections a.leform-section-active, .leform-sections a.leform-section-active:hover, .leform-sections a.leform-section-active:active, .leform-sections a.leform-section-active:focus {
+	color: #fff;
+	background: var(--primary-color);
+	border-color: var(--primary-color);
+	position: relative;
+}
+.leform-sections a:hover {
+	border-color: var(--primary-color);
+}
+.leform-sections a::after {
+	transform: scale(0);
+}
+.leform-sections a.leform-section-active::after {
+	content: '';
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	width: 10px;
+	height: 10px;
+	margin-top: -5px;
+	margin-left: -5px;
+	background: var(--primary-color);
+	transform: rotate(45deg);
+	animation: leform-section-active-arrow 0.5s
+}
+@-webkit-keyframes leform-section-active-arrow {
+  0% {opacity: 0;}
+  60% {opacity: 0;}
+  100% {opacity: 1;}
+}
+@keyframes leform-section-active-arrow {
+  0% {opacity: 0;}
+  60% {opacity: 0;}
+  100% {opacity: 1;}
+}
+.leform-sections a i {
+	width: 1em;
+	text-align: center;
+	margin-right: 0.3em;
+}
+.leform-section-content {
+	display: none;
+}
+/* Sections - end */
+
+/* Buttons - begin */
+.leform-admin-button-container {
+	text-align: right;
+	margin: 10px 0;
+}
+.leform-admin-button {
+	display: inline-block;
+	font-family: arial;
+	padding: 0.6em 1em;
+	font-size: 14px;
+	line-height: 1.4;
+	font-weight: 400;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
+	cursor: pointer;
+	-webkit-user-select: none;
+	user-select: none;
+	background-image: none;
+	border: 1px solid transparent;
+	border-radius: 3px;
+	transition-duration: .3s;
+	-webkit-transition-duration: .3s;
+	color: #fff;
+	background: var(--primary-color);
+	text-decoration: none;
+	outline: none;
+	box-shadow: none;
+}
+.leform-admin-button-gray {
+	color: #444;
+	background: #f0f0f0;
+	border: 1px solid #ccc;
+}
+.leform-admin-button-small {
+	font-size: 12px;
+	padding: 0.5em 1em;
+}
+.leform-admin-button-large {
+	font-size: 16px;
+	padding: 0.6em 1em;
+}
+.leform-admin-button-disabled {
+	opacity: 0.3;
+	cursor: default !important;
+}
+.leform-admin-button-disabled label {
+	cursor: default !important;
+}
+.leform-admin-button:active {
+	background-image: none;
+	outline: 0;
+	-webkit-box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+	box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+	text-decoration: none;
+	color: #fff;
+	background: var(--primary-color);
+	background-image: none;
+	outline: none;
+	box-shadow: none;
+	transform:translateY(2px);
+	-webkit-transform:translateY(2px);
+}
+.leform-admin-button-gray:active {
+	color: #222;
+	background: #e8e8e8;
+	border: 1px solid #ccc;
+}
+.leform-admin-button:hover, .leform-admin-button:focus {
+	text-decoration: none;
+	color: #fff;
+	background: var(--primary-color);
+	background-image: none;
+	outline: none;
+	box-shadow: none;
+}
+.leform-admin-button-gray:hover, .leform-admin-button-gray:focus {
+	color: #333;
+	background: #e8e8e8;
+	border: 1px solid #ccc;
+}
+.leform-admin-button label {
+	display: inline-block;
+	margin-left: 8px;
+	vertical-align: middle;
+	margin-bottom: 0;
+	font-weight: 400;
+}
+.leform-admin-button i {
+	vertical-align: middle;
+}
+.leform-admin-buttons-create {
+	text-align: center;
+	margin-top: 20px;
+}
+.leform-admin-button-create {
+	font-size: 16px;
+	padding: 0 1.6em;
+	line-height: 50px;
+}
+/* Buttons - end */
+
+/* FA begin */
+.leform-fa-selector-overlay {
+	position: fixed !important;
+	z-index: 99988;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	width: 100%;
+	background-position: center center;
+	background: rgba(0,0,0,0.8);
+	display: none;
+}
+.leform-fa-selector {
+	position: fixed !important;
+	box-sizing: border-box;
+	z-index: 99989;
+	top: 50%;
+	left: 50%;
+	width: 925px;
+	height: 600px;
+	background: #ffffff;
+	transform:translate(-50%, -50%);
+	-webkit-transform:translate(-50%, -50%);
+	box-shadow: 3px 3px 20px -5px #000000;
+	display: none;
+	overflow: hidden;
+}
+.leform-fa-selector * {
+	box-sizing: border-box;
+}
+.leform-fa-selector-inner {
+	height: 600px;
+	position: relative;
+	box-sizing: border-box;
+}
+.leform-fa-selector-header {
+	box-sizing: border-box;
+	height: 72px;
+	line-height: 72px;
+	padding: 0 0 0 20px;
+	text-align: left;
+	border-bottom: 1px solid #ffffff;
+	background: #ffffff;
+}
+.leform-fa-selector-header input[type="text"] {
+	box-sizing: border-box;
+	margin: 30px 0 0 10px;
+	line-height: 32px;
+	padding: 0;
+	width: 50%;
+	font-size: 16px;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-bottom: 2px solid #e0e0e0;
+	outline: none;
+	box-shadow: none;
+	transition-duration: .3s;
+	-webkit-transition-duration: .3s;
+}
+.leform-fa-selector-header input[type="text"]:focus {
+	border-bottom: 2px solid var(--primary-color);
+}
+.leform-fa-selector-header a {
+	display: block;
+	float: right;
+	font-size: 20px;
+	width: 52px;
+	height: 52px;
+	line-height: 52px;
+	color: #202020;
+	text-align: center;
+	text-shadow: none !important;
+	box-shadow: none !important;
+	outline: none !important;
+	border: none !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	transition-property: all;
+	transition-timing-function: ease-in-out;
+	transition-duration: 300ms;
+}
+.leform-fa-selector-header a:hover {
+	color: var(--primary-color);
+}
+.leform-fa-selector-content {
+	height: 528px;
+	padding: 10px 20px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	background: #ffffff;
+}
+.leform-fa-selector-content::-webkit-scrollbar {
+	width: 5px;
+}
+.leform-fa-selector-content::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+}
+.leform-fa-selector-content::-webkit-scrollbar-thumb {
+	background-color: var(--primary-color);
+}
+
+.leform-fa-selector-content span {
+	float: left;
+	width: 40px;
+	text-align: center;
+	height: 40px;
+	line-height: 40px;
+	color: #000;
+	opacity: 0.5;
+	font-size: 20px;
+	cursor: pointer;
+}
+.leform-fa-selector-content span:hover {
+	transform: scale(1);
+	-webkit-transform: scale(1.3);
+	opacity: 1;
+	border-radius: 3px;
+	background: #444444;
+	color: #ffffff;
+	overflow: hidden;
+	transition-property: transform;
+	transition-timing-function: ease-in-out;
+	transition-duration: 300ms;
+}
+/* FA - end */
+/* Bulk Options - begin */
+#leform-bulk-options-overlay {
+	z-index: 99988;
+}
+#leform-bulk-options {
+	z-index: 99989;
+}
+#leform-bulk-options .leform-admin-popup-content-form {
+	padding: 20px;
+}
+.leform-bulk-options-container:before, .leform-bulk-options-container:after {
+	content: " ";
+	display: block;
+}
+.leform-bulk-options-container:after {
+	clear: both;
+}
+.leform-bulk-categories {
+	float: left;
+	width: 48%;
+}
+.leform-bulk-categories ul {
+	list-style: none;
+	margin: 0;
+}
+.leform-bulk-categories ul li {
+	display: block;
+	float: left;
+	width: 48%;
+	margin: 1%;
+	border: 1px solid #ccc;
+	background: #f0f0f0;
+	padding: 1em 1.3em;
+	cursor: pointer;
+	border-radius: 3px;
+	color: #444;
+	transition-duration: 300ms;
+	-webkit-transition-duration: 300ms;
+}
+.leform-bulk-categories ul li:hover {
+	background: #e8e8e8;
+	color: #222;
+}
+.leform-bulk-categories ul li:active {
+	transform:scale(0.95);
+	-webkit-transform:scale(0.95);
+}
+.leform-bulk-editor {
+	float: right;
+	width: 50%;
+}
+.leform-bulk-editor textarea {
+	width: 100%;
+	height: 300px !important;
+	line-height: 1.4;
+}
+.leform-bulk-editor textarea::-webkit-scrollbar {
+	width: 5px;
+}
+.leform-bulk-editor textarea::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+}
+.leform-bulk-editor textarea::-webkit-scrollbar-thumb {
+	background-color: var(--primary-color);
+}
+.leform-bulk-options-text {
+	margin: 10px;
+	font-style: italic;
+	font-size: 15px;
+}
+/* Bulk Options - end */
+/* Context Menu - begin */
+.leform-context-menu {
+	position: absolute;
+	z-index: 999;
+	top: 0;
+	left: 0;
+	display: none;
+	background: #fff;
+	border: 1px solid #c0c0c0;
+	box-sizing: border-box;
+	width: 200px;
+	box-shadow: 2px 2px 10px -5px rgba(0,0,0,0.9);
+}
+.leform-context-menu ul {
+	white-space: nowrap;
+	display: block;
+	height: auto;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.leform-context-menu ul li {
+	text-align: left;
+	position: relative;
+	height: 32px;
+	display: block;
+	line-height: 32px;
+	letter-spacing: normal;
+	background-color: transparent;
+	font-family: arial;
+	color: #2f353b;
+	font-size: 13px;
+	margin: 0;
+}
+.leform-context-menu ul li.leform-context-menu-line {
+	height: 1px;
+	display: block;
+	line-height: 1px;
+	background-color: #e0e0e0;
+	margin: 0;
+}
+.leform-context-menu ul li a {
+	display: block;
+	color: #2f353b;
+	cursor: pointer !important;
+	text-decoration: none !important;
+	box-shadow: none !important;
+	outline: none !important;
+	padding: 0 1em;
+}
+.leform-context-menu ul li:hover>a {
+	color: var(--primary-color);
+	background: #f8f8f8;
+}
+.leform-context-menu ul li a i {
+	width: 1em;
+	margin-right: 0.5em;
+}
+.leform-context-menu ul li a i.fa-caret-right {
+	float: right;
+	line-height: inherit;
+	margin-right: -10px;
+}
+.leform-context-menu ul li ul {
+	display: none;
+	position: absolute;
+	top: 0;
+	right: -160px;
+	width: 100px;
+	background: #fff;
+	border: 1px solid #c0c0c0;
+	box-sizing: border-box;
+	width: 160px;
+	box-shadow: 2px 2px 10px -5px rgba(0,0,0,0.9);
+}
+.leform-context-menu ul li:hover ul {
+	display: block;
+}
+.leform-context-menu ul li ul li {
+	overflow: hidden;
+}
+/* Context Menu end */
+
+
+.leform-admin {
+	font-family: arial;
+	margin: 10px 0 20px 0px;
+	position: relative;
+	/* border: 1px solid #c0c0c0; */
+}
+.leform-admin>h2, .leform-admin>h1 {
+	font-size: 23px;
+	font-weight: 400;
+	margin: 0;
+	padding: 9px 0 4px;
+	line-height: 29px;
+	margin-bottom: 20px !important;
+}
+#uap-body .leform-admin>h2, #uap-body .leform-admin>h1 {
+	padding: 0;
+}
+#uap-body .wp-picker-container+em {
+	display: block;
+}
+
+.leform-admin-editor * {
+	box-sizing: border-box;
+}
+.leform-header {
+	background: var(--primary-color);
+	height: 56px;
+	line-height: 56px;
+}
+.leform-header-settings,
+.leform-header-longlink,
+.leform-header-shortlink,
+.leform-header-using,
+.leform-header-preview {
+	display: inline-block;
+	float: left;
+	width: 56px;
+	height: 56px;
+}
+.leform-header-using,
+.leform-header-preview {
+	float: right;
+}
+.leform-header-settings>span,
+.leform-header-using>span,
+.leform-header-preview>span {
+	display: inline-block;
+	width: 56px;
+	cursor: pointer;
+	color: #fff;
+	text-align: center;
+	font-size: 20px;
+	background: transparent;
+	transition-duration: .3s;
+	-webkit-transition-duration: .3s;
+}
+.leform-header-longlink,
+.leform-header-shortlink {
+	width: auto;
+}
+.leform-header-settings>span:hover,
+.leform-header-longlink>a:hover,
+.leform-header-shortlink>a:hover,
+.leform-header-using>span:hover,
+.leform-header-preview>span:hover {
+	background: var(--primary-color-darker);
+}
+/*
+main .leform-element .leform-button {
+	background-color: var(--primary-color);
+}
+*/
+.leform-header-save {
+	display: inline-block;
+	float: right;
+	height: 56px;
+}
+.leform-header-save>span,
+.leform-header-longlink>a,
+.leform-header-shortlink>a {
+	display: inline-block;
+	cursor: pointer;
+	color: #fff;
+	text-align: center;
+	font-size: 16px;
+	background: var(--primary-color);
+	padding: 0 1.5em;
+	transition-duration: .3s;
+	-webkit-transition-duration: .3s;
+
+}
+.leform-header-save>span>i {
+	width: 1em;
+	margin-right: 0.5em;
+}
+.leform-header-save>span:hover {
+	background: var(--primary-color-darker);
+}
+/*
+.leform-canvas-items {
+	white-space: nowrap;
+	height: auto;
+	margin: 0;
+	padding: 0;
+	float: right;
+}
+.leform-canvas-items>li {
+	display: inline-block;
+}
+.leform-canvas-light {
+	background: #f8f8f8 url(../images/builder-bg-light-2.png) 0 0 repeat;
+}
+.leform-canvas-dark {
+	background: #404040 url(../images/builder-bg-dark-2.png) 0 0 repeat;
+}
+.leform-canvas-items>li>span {
+	display: block;
+	width: 32px;
+	height: 32px;
+	border: 1px solid #d4d4d4;
+	border-radius: 3px;
+	overflow: hidden;
+}
+*/
+.leform-toolbar {
+	background: #fff;
+	border-bottom: 1px solid #d4d4d4;
+	border-left: 1px solid #d4d4d4;
+	border-right: 1px solid #d4d4d4;
+}
+.leform-toolbar-list {
+	white-space: nowrap;
+	/*overflow: hidden;*/
+	height: auto;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+.leform-toolbar-list::after {
+	display: table;
+	content: ' ';
+	clear: both;
+}
+.leform-toolbar-list>li {
+	position: relative;
+	height: 43px;
+	width: 48px;
+	line-height: 38px;
+	margin: 0;
+	padding: 0;
+	float: left;
+}
+.leform-toolbar-list>li>a {
+	text-align: center;
+	height: 43px;
+	width: 48px;
+	display: inline-block;
+	line-height: 38px;
+	cursor: pointer;
+	font-size: 15px;
+	letter-spacing: normal;
+	background-color: transparent;
+	color: #2f353b;
+	margin: 0;
+	padding: 0;
+	text-decoration: none !important;
+	box-shadow: none !important;
+	outline: none !important;
+	border: none !important;
+	transition-duration: .3s;
+	-webkit-transition-duration: .3s;
+}
+.leform-toolbar-list>li>a i {
+	font-size: 24px;
+	line-height: 43px;
+}
+
+.leform-toolbar-list>li>a:hover {
+	color: var(--primary-color);
+	background: #f8f8f8;
+}
+.leform-toolbar-list>li>ul {
+	position: absolute;
+	z-index: 99;
+	top: 38px;
+	left: 0px;
+	display: none;
+	background: #fff;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	width: 120px;
+	box-shadow: 2px 2px 10px -5px rgba(0,0,0,0.9);
+	white-space: nowrap;
+	overflow: hidden;
+	height: auto;
+	margin: 0;
+	padding: 0;
+}
+.leform-toolbar-list>li:hover>ul {
+	display: block;
+}
+.leform-toolbar-list>li>ul>li {
+	text-align: left;
+	position: relative;
+	height: 32px;
+	display: block;
+	line-height: 32px;
+	margin: 0;
+	padding: 0;
+}
+.leform-toolbar-list>li>ul>li>a {
+	text-align: left;
+	height: 32px;
+	display: block;
+	line-height: 32px;
+	letter-spacing: normal;
+	background-color: transparent;
+	font-family: arial;
+	color: #2f353b;
+	font-size: 13px;
+	margin: 0;
+	padding: 0 10px;
+	text-decoration: none !important;
+	box-shadow: none !important;
+	outline: none !important;
+	border: none !important;
+	transition-duration: .3s;
+	-webkit-transition-duration: .3s;
+
+}
+.leform-toolbar-list>li>ul>li>a:hover {
+	color: var(--primary-color);
+	background: #f8f8f8;
+}
+.leform-toolbar-tooltip {
+	font-size: 14px !important;
+/*	text-transform: uppercase;*/
+	z-index: 99999 !important;
+}
+
+.leform-pages-bar {
+	height: auto;
+	line-height: 48px;
+	background: #f4f4f4;
+	border-left: 1px solid #d4d4d4;
+	border-right: 1px solid #d4d4d4;
+	border-bottom: 1px solid #d4d4d4;
+	overflow: hidden;
+}
+.leform-pages-bar-items {
+	height: auto;
+	margin: -1px 0 0 0;
+	padding: 0;
+	list-style-type: none;
+	back
+}
+.leform-pages-bar-items::after {
+	display: table;
+	content: ' ';
+	clear: both;
+}
+.leform-pages-bar-items>li {
+	position: relative;
+	height: 54px;
+	line-height: 48px;
+	margin: 5px;
+	padding: 0;
+	outline-offset: 0px;
+	background: #fff;
+	border-radius: 5px;
+	float: left;
+	cursor: default;
+	transition-property: background;
+	-webkit-transition-property: background;
+	transition-duration: .3s;
+	-webkit-transition-duration: .3s;
+	white-space: nowrap;
+	min-width: 100px;
+	border: 3px solid transparent;
+}
+.leform-pages-bar-items>li:hover {
+	background: #f0f0f0;
+}
+.leform-pages-bar-item-placeholder {
+	border-right: 1px solid #d4d4d4;
+}
+.leform-pages-bar-item-helper {
+	border: 1px solid #d4d4d4 !important;
+}
+.leform-pages-bar-items>li label {
+	line-height: inherit;
+	display: block;
+	vertical-align: top;
+	overflow: hidden;
+	max-width: 160px;
+	cursor: pointer;
+	margin-bottom: 0;
+	font-weight: 400;
+	padding: 0 1em;
+	text-align: center;
+}
+.leform-pages-bar-items>li span {
+	display: inline-block;
+	line-height: 48px;
+	height: 43px;
+	vertical-align: top;
+	transition-property: width;
+	-webkit-transition-property: width;
+	transition-duration: .2s;
+	-webkit-transition-duration: .2s;
+	overflow: hidden;
+	width: 0;
+	text-align: right;
+	cursor: pointer;
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: 0;
+	background: rgba(240,240,240,0.7);
+}
+.leform-pages-bar-items>li.leform-pages-bar-item-active,
+.leform-pages-bar-items>li.leform-pages-bar-item-active.leform-pages-bar-item-confirmation {
+	border: 3px solid var(--primary-color);
+}
+.leform-pages-bar-items>li.leform-pages-bar-item-helper span,
+/*.leform-pages-bar-items>li.leform-pages-bar-item-active span,*/
+.leform-pages-bar-items>li:hover span {
+	width: 56px;
+}
+.leform-pages-bar-items>li.leform-pages-bar-item-helper.leform-pages-bar-item-confirmation span,
+/*.leform-pages-bar-items>li.leform-pages-bar-item-active.leform-pages-bar-item-confirmation span,*/
+.leform-pages-bar-items>li.leform-pages-bar-item-confirmation:hover span {
+	width: 32px;
+}
+.leform-pages-bar-items>li span a, .leform-pages-bar-items>li span a:visited {
+	display: inline-block;
+	font-size: 20px;
+	margin: 0 0.2em;
+	color: #666;
+	outline: none !important;
+	border: none !important;
+	box-shadow: none !important;
+	text-decoration: none !important;
+}
+.leform-pages-bar-items>li span a:hover i, .leform-pages-bar-items>li span a:active i {
+	color: var(--primary-color);
+}
+.leform-pages-bar-items>li span a i {
+	line-height: inherit;
+	vertical-align: top;
+	transition-property: color;
+	-webkit-transition-property: color;
+	transition-duration: .3s;
+	-webkit-transition-duration: .3s;
+}
+.leform-pages-bar-items>li span a:hover i.fa-trash, .leform-pages-bar-items>li span a:active i.fa-trash {
+	color: #E04000;
+}
+.leform-pages-bar-items>li span a i.fa-trash{
+	font-size: 16px;
+}
+.leform-pages-bar-item-delete-disabled i {
+	color: #ccc !important;
+	cursor: default !important;
+}
+.leform-builder {
+	background: #f8f8f8 url(../images/builder-bg-light-2.png) 0 0 repeat;
+	padding: 20px 20px 60px 20px;
+	border-bottom: 1px solid #d4d4d4;
+	border-left: 1px solid #d4d4d4;
+	border-right: 1px solid #d4d4d4;
+	min-height: -webkit-fill-available;
+}
+.leform-form {
+	position: relative;
+	max-width: 960px;
+	width: 96%;
+	margin: 0px auto;
+	display: none;
+}
+.leform-elements {
+	min-height: 60px;
+}
+.leform-element {
+	width: 100%;
+	outline: 1px dashed #aaa !important;
+	height: auto !important;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding: 10px;
+	display: block !important;
+	visibility: visible !important;
+	opacity: 1 !important;
+}
+.leform-element:hover {
+	outline: 2px solid var(--primary-color) !important;
+}
+.leform-element::before {
+	display: table;
+	content: ' ';
+}
+.leform-element::after {
+	clear: both;
+	display: table;
+	content: ' ';
+}
+.leform-element-cover {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	transition-duration: .3s;
+	-webkit-transition-duration: .3s;
+	display: none;
+}
+div.leform-element-checkbox-container div.leform-element-cover {
+	display: none !important;
+}
+.leform-element-placeholder {
+	background: transparent;
+	border-radius: 3px;
+	border: 1px dashed var(--primary-color);
+	background-color: var(--primary-color);
+	opacity: 0.2;
+	height: 40px;
+}
+.leform-element-helper {
+	height: 40px !important;
+	width: 160px !important;
+	overflow: hidden !important;
+}
+.leform-element-helper .leform-element-cover {
+	display: block;
+	background: white;
+}
+.leform-col {
+	padding: 10px 10px !important;
+	float: left;
+	outline: 1px dashed #ccc;
+}
+.leform-col .leform-element:first-of-type {
+	margin-top: 0;
+}
+.leform-col .leform-element:last-of-type {
+	margin-bottom: 0;
+}
+
+.leform-col-0 {
+    width: 0%;
+}
+
+.leform-col-1 {
+    width: calc((1 / 12) * 100%);
+}
+
+.leform-col-2 {
+    width: calc((2 / 12) * 100%);
+}
+
+.leform-col-3 {
+    width: calc((3 / 12) * 100%);
+}
+
+.leform-col-4 {
+    width: calc((4 / 12) * 100%);
+}
+
+.leform-col-5 {
+    width: calc((5 / 12) * 100%);
+}
+
+.leform-col-6 {
+    width: calc((6 / 12) * 100%);
+}
+
+.leform-col-7 {
+    width: calc((7 / 12) * 100%);
+}
+
+.leform-col-8 {
+    width: calc((8 / 12) * 100%);
+}
+
+.leform-col-9 {
+    width: calc((9 / 12) * 100%);
+}
+
+.leform-col-10 {
+    width: calc((10 / 12) * 100%);
+}
+
+.leform-col-11 {
+    width: calc((11 / 12) * 100%);
+}
+
+.leform-col-12 {
+    width: calc((12 / 12) * 100%);
+}
+
+#leform-global-message {
+	position: fixed;
+	top: 50px;
+	right: 10px;
+	display: none;
+	z-index: 9999999;
+	padding: 1em 1.5em;
+	border-radius: 3px;
+	font-size: 15px;
+	line-height: 1.4;
+	vertical-align: middle;
+	font-weight: 400;
+	box-shadow: 2px 2px 10px -6px #000000;
+}
+#uap-body #leform-global-message {
+	top: 16px !important;
+}
+.leform-global-message-info {
+	color: #fff;
+	background: #5bc0de;
+}
+.leform-global-message-success {
+	color: #fff;
+	background: #5cb85c;
+}
+.leform-global-message-danger {
+	color: #fff;
+	background: #d9534f;
+}
+.leform-top-forms {
+	overflow: hidden;
+	height: 100%;
+}
+.leform-top-form-left {
+	float: left;
+}
+.leform-top-form-right {
+	float: right;
+}
+.leform-filter-form {
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+.leform-filter-form .button-secondary {
+	height: 32px;
+	font-size: 14px;
+	box-shadow: none !important;
+	outline: none !important;
+	padding: 0 1em;
+}
+.leform-filter-form input[type="text"], .leform-filter-form select, .leform_records input[type="text"], .leform input[type="text"], .leform input[type="email"], .leform input[type="password"], .leform select, .leform textarea {
+	font-size: 14px;
+	font-weight: normal;
+	border-radius: 2px;
+	padding: 0.5em 0.8em;
+	border: 1px solid #CCC;
+	border-spacing: 0;
+	font-family: arial, verdana;
+	box-sizing: border-box;
+	margin: 0;
+	background-color: #FFF;
+	height: auto;
+	min-width: 0px;
+	max-width: 100%;
+	box-shadow: none;
+}
+.leform-filter-form input[type="text"], .leform_records input[type="text"], .leform input[type="text"], .leform input[type="email"], .leform input[type="password"] {
+	line-height: 1;
+}
+.leform textarea {
+	height: 120px;
+}
+.leform select {
+	line-height: 1;
+	padding-right: 2em;
+}
+.leform-record-details {
+	padding: 10px 20px;
+}
+.leform-record-details h3 {
+	padding: 0 0.8em;
+	margin: 10px 0;
+	color: #fff;
+	display: inline-block;
+	background: #444;
+	line-height: 2.0em;
+	font-weight: 400;
+	vertical-align: middle;
+	font-size: 18px;
+}
+.leform-record-details h4 {
+	padding: 0 0.8em;
+	margin: 10px 2px;
+	color: #fff;
+	display: inline-block;
+	background: #999;
+	line-height: 2.0em;
+	font-weight: 400;
+	vertical-align: middle;
+	font-size: 16px;
+}
+.leform-record-details-table {
+	width: 100%;
+}
+.leform-record-details-table tr td {
+	vertical-align: top;
+	font-size: 15px;
+	padding: 0.4em 0.8em;
+	min-height: 28px;
+}
+.leform-record-details-table tr:nth-child(odd) {
+	background-color: #f9f9f9;
+}
+.leform-record-details-table-name {
+	width: 300px;
+	max-width: 33%;
+	font-weight: bold;
+}
+.leform-record-details-table-value {
+	position: relative;
+	padding-right: 96px !important;
+}
+.leform-admin-popup .leform-record-details-table-value .leform-record-details-toolbar {
+	display: none;
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	right: 0;
+	transition-property: opacity;
+	transition-duration: 300ms;
+	color: #a0a0a0;
+}
+.leform-admin-popup .leform-record-details-table-value:hover .leform-record-details-toolbar {
+	display: block;
+	opacity: 1;
+}
+.leform-admin-popup .leform-record-details-table-value .leform-record-details-toolbar span {
+	display: inline-block;
+	width: 28px;
+	height: 28px;
+	line-height: 28px;
+	font-size: 16px;
+	text-align: center;
+	cursor: pointer;
+	color: #a0a0a0;
+	transition-property: color;
+	transition-duration: 300ms;
+}
+.leform-admin-popup .leform-record-details-table-value .leform-record-details-toolbar span:hover {
+	color: var(--primary-color);
+}
+.leform-admin-popup .leform-record-details-table-value .leform-record-details-toolbar span:active {
+	transform:translateY(2px);
+	-webkit-transform:translateY(2px);
+}
+.leform-record-field-editor {
+	line-height: 1.5;
+	display: none;
+}
+.leform-record-field-editor input, .leform-record-field-editor select, .leform-record-field-editor textarea {
+	font-size: 15px;
+	font-weight: normal;
+	border-radius: 3px;
+	padding: 0 0.8em;
+	line-height: 40px;
+	border: 1px solid #CCC;
+	border-spacing: 0;
+	font-family: arial, verdana;
+	box-sizing: border-box;
+	box-shadow: none;
+	margin: 0;
+	background: #FFF;
+	height: 40px;
+	min-width: 0px;
+	max-width: 100%;
+	outline: none;
+	width: 100%;
+}
+.leform-record-field-editor select {
+	height: 40px !important;
+	font-size: 15px !important;
+}
+.leform-record-field-editor textarea {
+	height: 10em !important;
+	line-height: 1.4;
+	padding: 0.4em 0.8em;
+}
+.leform-record-field-editor input:focus, .leform-record-field-editor select:focus, .leform-record-field-editor textarea:focus {
+	border-color: var(--primary-color);
+	box-shadow: 0 0 16px -10px var(--primary-color);
+}
+.leform-record-field-editor-scrollbox {
+	height: 9em;
+	padding: 0.2em 0.5em;
+	border: 1px solid #CCC;
+	border-radius: 3px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	background: #fff;
+}
+.leform-record-field-editor-scrollbox::-webkit-scrollbar {
+	width: 5px;
+}
+.leform-record-field-editor-scrollbox::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+}
+.leform-record-field-editor-scrollbox::-webkit-scrollbar-thumb {
+	background-color: var(--primary-color);
+	opacity: 0.8;
+}
+.leform-record-field-editor-buttons {
+	margin-top: 10px;
+}
+.leform-record-field-editor-buttons a {
+	margin-right: 10px;
+}
+.leform-stats-filter {
+	margin-bottom: 20px;
+}
+.leform-stats-select-container, .leform-stats-input-container, .leform-stats-radio-container {
+	display: inline-block;
+	margin-bottom: 5px;
+	vertical-align: top;
+	position: relative;
+}
+.leform-stats-select-container {
+	width: 240px;
+}
+.leform-stats-input-container {
+	width: 120px;
+}
+.leform-stats-radio-toggle-container {
+	height: 34px;
+	padding-top: 2px;
+}
+.leform-stats-radio-container {
+}
+.leform-stats-select-container label, .leform-stats-input-container label, .leform-stats-radio-container label {
+	font-style: italic;
+	font-size: 13px;
+	color: #a0a0a0;
+	display: block;
+}
+.leform-stats-filter input[type="text"], .leform-stats-filter select {
+	font-size: 14px;
+	font-weight: normal;
+	border-radius: 3px;
+	border: 1px solid #CCC;
+	border-spacing: 0;
+	font-family: arial, verdana;
+	box-sizing: border-box;
+	margin: 0;
+	background-color: #FFF;
+	height: 36px;
+	line-height: 36px;
+	min-width: 0px;
+	max-width: 100%;
+	width: 100%;
+	box-shadow: none;
+	vertical-align: top;
+	padding: 0 1em;
+}
+.leform-stats-button {
+	display: inline-block;
+	line-height: 36px;
+	height: 36px;
+	margin-bottom: 5px;
+	font-size: 15px;
+	font-weight: 400;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: top;
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
+	cursor: pointer;
+	user-select: none;
+	background-image: none;
+	border: 1px solid transparent;
+	border-radius: 3px;
+	transition-duration: .3s;
+	-webkit-transition-duration: .3s;
+	color: #444;
+	background: #e8e8e8;
+	border: 1px solid #c0c0c0;
+	text-decoration: none;
+	outline: none;
+	box-shadow: none;
+	box-sizing: border-box;
+	padding: 0 1em;
+}
+.leform-stats-button-disabled {
+	opacity: 0.3;
+	cursor: default !important;
+}
+.leform-stats-button:active {
+	background-image: none;
+	outline: 0;
+	-webkit-box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+	box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+	text-decoration: none;
+	color: #444;
+	background: #e0e0e0;
+	background-image: none;
+	outline: none;
+	box-shadow: none;
+	transform:translateY(2px);
+	-webkit-transform:translateY(2px);
+}
+.leform-stats-button:hover, .leform-stats-button:focus {
+	text-decoration: none;
+	color: #444;
+	background: #e0e0e0;
+	background-image: none;
+	outline: none;
+	box-shadow: none;
+}
+.leform-stats-button label {
+	line-height: 34px;
+	display: inline-block;
+	margin-left: 8px;
+	vertical-align: top;
+}
+.leform-stats-button i {
+	line-height: 34px;
+	vertical-align: top;
+}
+
+.leform-using-details {
+	/*padding: 10px 20px;*/
+}
+.leform-using-details table {
+	width: 100%;
+	border-collapse: collapse;
+}
+.leform-using-details table tr {
+	border-bottom: 1px solid #f4f4f4;
+}
+.leform-using-details table tr:nth-child(even) {
+	background-color: #fcfcfc;
+}
+.leform-using-details table tr th, .leform-using-details table tr td {
+	vertical-align: top;
+	font-size: 15px;
+	padding: 1em 1.5em;
+}
+.leform-using-details table th {
+	width: 200px;
+	max-width: 33%;
+	font-weight: 400;
+	text-align: left;
+}
+.leform-using-details table td input, .leform-using-details table td textarea {
+	font-size: 14px;
+	font-weight: normal;
+	border-radius: 3px;
+	padding: 0 0.8em;
+	line-height: 36px;
+	border: 1px solid #CCC;
+	border-spacing: 0;
+	font-family: courier;
+	box-sizing: border-box;
+	box-shadow: none;
+	margin: 0;
+	background: #FFF;
+	height: 36px;
+	min-width: 0px;
+	max-width: 100%;
+	outline: none;
+	width: 100%;
+}
+.leform-using-details table td textarea {
+	line-height: 1.475em;
+	height: 7.5em;
+	padding: 0.5em 0.8em;
+}
+.leform-using-details table td input:focus, .leform-using-details table td textarea:focus {
+	border-color: var(--primary-color);
+	box-shadow: 0 0 16px -10px var(--primary-color);
+}
+.leform-using-details table td span {
+	font-style: italic;
+	display: block;
+	margin-bottom: 0.2em;
+	line-height: 1.4em;
+}
+.leform-using-details table td ol li span {
+	font-style: normal;
+}
+.leform-stylemanager-details {
+	/*padding: 10px 20px;*/
+}
+.leform-stylemanager-buttons {
+	margin: 30px 10px 10px 10px;
+	text-align: right;
+}
+.leform-stylemanager-details table {
+	width: 100%;
+	border-collapse: collapse;
+	border: 1px solid #f4f4f4;
+}
+.leform-stylemanager-details table tr {
+	border-bottom: 1px solid #f4f4f4;
+}
+.leform-stylemanager-details table tr:nth-child(even) {
+	background-color: #fcfcfc;
+}
+.leform-stylemanager-details table tr th, .leform-stylemanager-details table tr td {
+	vertical-align: middle;
+	font-size: 15px;
+	padding: 1em 1.5em;
+}
+.leform-stylemanager-details table th {
+	width: 100%;
+	max-width: 33%;
+	font-weight: 400;
+	text-align: left;
+}
+.leform-stylemanager-details.leform-stylemanager-empty table th {
+	text-align: center;
+	padding: 3em 1.5em;
+}
+.leform-settings table {
+	width: 100%;
+	border-collapse: collapse;
+}
+.leform-settings table em {
+	font-size: 13px;
+	color: #A0A0A0;
+}
+.leform-settings table tr {
+
+}
+.leform-settings table td,
+.leform-settings table th {
+	padding: 5px 5px 15px 5px;
+	vertical-align: top;
+	border: 0px solid #C0C0C0;
+	text-align: left;
+	font-size: 14px;
+}
+.leform-settings table th {
+	width: 180px;
+}
+.leform-settings h3 {
+	padding: 0 0.8em;
+	margin: 32px 0 16px 0;
+	color: #fff;
+	display: inline-block;
+	background: #444;
+	line-height: 2.0em;
+	font-weight: 400;
+	vertical-align: middle;
+	cursor: default !important;
+	font-size: 1.3em;
+}
+.leform-settings input[type="checkbox"] {
+	display: none !important;
+}
+.leform-settings input[type="checkbox"]+label {
+	appearance: none;
+	width: 48px;
+	height: 24px;
+	border: 1px solid #ccc;
+	border-radius: 24px;
+	background: #ffffff;
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+	vertical-align: middle;
+	transition: background 0.3s;
+	box-sizing: border-box;
+	outline: none;
+	box-shadow: none;
+	cursor: pointer;
+	margin: 0;
+	padding: 0;
+}
+.leform-settings input[type="checkbox"]+label:before {
+	content: '';
+}
+.leform-settings input[type="checkbox"]+label:after {
+	content: '';
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	width: 18px;
+	height: 18px;
+	background: #ccc;
+	border: none;
+	border-radius: 18px;
+	transition: left 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+.leform-settings input[type="checkbox"]:checked+label {
+	background: var(--primary-color);
+	border-color: var(--primary-color);
+}
+.leform-settings input[type="checkbox"]:checked+label:after {
+	left: 26px;
+	background: #fff;
+}
+.leform-settings input[type="checkbox"]:disabled+label {
+	opacity: 0.5;
+}
+.leform-checkbox-toggle-container {
+	height: 40px;
+	padding-top: 4px;
+}
+.leform-settings span {
+	padding-left: 10px;
+}
+.leform-button-container {
+	text-align: right;
+	margin: 10px 0;
+}
+.leform-button {
+	display: inline-block;
+	font-family: arial;
+	padding: 0.6em 1em;
+	font-size: 14px;
+	line-height: 1.4;
+	font-weight: 400;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
+	cursor: pointer;
+	-webkit-user-select: none;
+	user-select: none;
+	background-image: none;
+	border: 1px solid transparent;
+	border-radius: 3px;
+	transition-duration: .3s;
+	-webkit-transition-duration: .3s;
+	color: #fff;
+	background: var(--primary-color);
+	border: 1px solid var(--primary-color);
+	text-decoration: none;
+	outline: none;
+	box-shadow: none;
+}
+.leform-button-small {
+	font-size: 12px;
+	padding: 0.5em 1em;
+}
+.leform-button-large {
+	font-size: 16px;
+	padding: 0.6em 1em;
+}
+.leform-button-disabled {
+	opacity: 0.3;
+	cursor: default !important;
+}
+.leform-button-disabled label {
+	cursor: default !important;
+}
+.leform-button:active {
+	background-image: none;
+	outline: 0;
+	-webkit-box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+	box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+	text-decoration: none;
+	color: #fff;
+	background: var(--primary-color);
+	background-image: none;
+	outline: none;
+	box-shadow: none;
+	transform:translateY(2px);
+	-webkit-transform:translateY(2px);
+}
+.leform-button:hover, .leform-button:focus {
+	text-decoration: none;
+	color: #fff;
+	background: var(--primary-color);
+	background-image: none;
+	outline: none;
+	box-shadow: none;
+}
+.leform-button label {
+	display: inline-block;
+	margin: 0 0 0 8px;
+	vertical-align: middle;
+	font-weight: 400;
+	cursor: pointer;
+}
+.leform-button i {
+	vertical-align: middle;
+	width: 1em;
+}
+.leform-integrations-ajax-multiselect {
+	max-height: 200px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	background: #fcfcfc;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	min-height: 50px;
+	padding: 0.2em 0;
+	margin-bottom: 5px;
+}
+.leform-integrations-ajax-multiselect::-webkit-scrollbar {
+	width: 5px;
+}
+.leform-integrations-ajax-multiselect::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+.leform-integrations-ajax-multiselect::-webkit-scrollbar-thumb {
+	background-color: darkgrey;
+}
+.leform-integrations-ajax-multiselect-record {
+	white-space: nowrap;
+	padding: 0.2em 0.5em;
+	width: 1px;
+}
+.leform-integrations-ajax-multiselect-record label {
+	margin-left: 0.5em;
+}
+.leform-integrations-ajax-multiselect-loading {
+	text-align: center;
+	line-height: 40px;
+	font-size: 20px;
+	display: none;
+}
+.leform-integrations-ajax-options input {
+	cursor: default;
+}
+.leform-integrations-ajax-options::after {
+	font-family: 'Font Awesome 5 Free';
+	content: "\f107";
+	font-weight: 900;
+	display: inline-block;
+	text-align: center;
+	height: 40px;
+	width: 40px;
+	line-height: 40px;
+	color: #444;
+	position: absolute;
+	top: 0;
+	right: 0;
+	transition-duration: .3s;
+	-webkit-transition-duration: .3s;
+}
+.leform-integrations-ajax-options:hover::after {
+	color: var(--primary-color);
+}
+.leform-integrations-ajax-options-list {
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	box-shadow: 2px 2px 10px -7px rgba(0,0,0,0.9);
+	max-width: 100%;
+	position: absolute !important;
+	display: none;
+	overflow-y: hidden;
+	overflow-x: hidden;
+	max-height: 640px;
+	z-index: 9999;
+	width: 100%;
+	background: #FFF;
+	text-align: center;
+	max-height: 128px;
+}
+.leform-integrations-ajax-options-list::-webkit-scrollbar {
+	width: 5px;
+}
+.leform-integrations-ajax-options-list::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+.leform-integrations-ajax-options-list::-webkit-scrollbar-thumb {
+	background-color: darkgrey;
+}
+.leform-integrations-ajax-options-list i {
+	line-height: 64px;
+	font-size: 20px;
+}
+.leform-integrations-ajax-options-list-data a, .leform-integrations-ajax-options-list-data a:visited {
+	font-family: arial !important;
+	color: #888 !important;
+	line-height: 32px !important;
+	display: block !important;
+	text-decoration: none !important;
+	text-align: left !important;
+	transition-duration: .2s;
+	-webkit-transition-duration: .2s;
+	padding: 0 15px !important;
+	outline-width: 0 !important;
+	box-shadow: none !important;
+}
+.leform-integrations-ajax-options-list-data a:hover, .leform-integrations-ajax-options-list-data a:active {
+	background: #F8F8F8 !important;
+}
+.leform-integrations-ajax-options-list-data-error {
+	line-height: 64px;
+	text-align: center;
+}
+.leform-vertical-scroll {
+  overflow-y: scroll !important;
+}
+.leform-integrations-description {
+	font-size: 14px;
+	color: #aaa;
+	font-style: italic;
+	cursor: default;
+	display: block;
+}
+.leform-integrations-important {
+	padding: 0 20px 20px 1em;
+}
+.leform-integrations-important-content {
+	border: 1px dashed #c0c0c0;
+	border-radius: 5px;
+	background: #f0f0f0;
+}
+.leform-integrations-important-content h4 {
+	margin: 1.33em 1em;
+	padding: 0;
+	font-size: 1em;
+}
+.leform-integrations-ajax-inline, .leform-integrations-static-inline {
+	padding-left: 0 !important;
+}
+.leform-integrations-ajax-inline table, .leform-integrations-static-inline table {
+	width: 100%;
+	border-collapse: collapse;
+}
+.leform-integrations-ajax-inline table th, .leform-integrations-static-inline table th {
+	width: 33%;
+	font-weight: 400;
+}
+.leform-integrations-ajax-inline table th, .leform-integrations-ajax-inline table td,
+.leform-integrations-static-inline table th, .leform-integrations-static-inline table td {
+	padding-bottom: 5px;
+	vertical-align: top;
+	text-align: left;
+}
+.leform-integrations-ajax-inline table td.leform-middle-center, .leform-integrations-static-inline table td.leform-middle-center {
+	vertical-align: middle;
+	text-align: center;
+}
+.leform-properties-content-integrations-providers {
+	padding-left: 0 !important;
+}
+.leform-properties-content-integrations-providers a {
+	margin-right: 5px;
+	margin-bottom: 5px;
+}
+.leform-properties-content-payment-gateways-providers {
+	padding-left: 0 !important;
+}
+.leform-properties-content-payment-gateways-providers a {
+	margin-right: 5px;
+	margin-bottom: 5px;
+}
+a.leform-integrations-custom-remove {
+	text-decoration: none !important;
+	display: inline-block;
+	text-align: center;
+	color: #aaa !important;
+	box-shadow: none !important;
+	font-size: 16px;
+	width: 18px;
+	height: 18px;
+	transition-duration: .3s;
+	-webkit-transition-duration: .3s;
+}
+a.leform-integrations-custom-remove:hover {
+	color: var(--primary-color) !important;
+}
+a.leform-integrations-custom-remove:active {
+	transform: translateY(2px);
+	-webkit-transform: translateY(2px);
+}
+.leform-integrations-content .leform-properties-pure input+label+label {
+	margin-left: 0.7em;
+}
+
+.leform-widget-label {
+	clear: right;
+	min-width: 40%;
+	display: inline-block;
+}
+.leform-widget-tiny-text {
+	width: 60px;
+}
+.leform-hidden-container {
+	margin-top: 30px;
+}
+.leform-hidden-container>label {
+	font-weight: 700;
+	display: block;
+	margin-bottom: 5px;
+}
+.leform-hidden-element {
+	width: 230px;
+	padding: 0.7em 1em;
+	font-size: 15px;
+	line-height: 24px;
+	margin: 0 7px 7px 0;
+	outline: 1px dashed #aaa !important;
+	display: inline-block;
+	white-space: nowrap;
+	overflow: hidden;
+	cursor: default;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.leform-hidden-element:hover {
+	outline: 2px solid var(--primary-color) !important;
+}
+.leform-properties-content .leform-color {
+	min-width: 130px !important;
+	padding-left: 40px !important;
+}
+.leform-properties-content .minicolors-swatch {
+	width: 30px !important;
+	height: 30px !important;
+	border-radius: 3px !important;
+}
+.leform-properties-content .minicolors-panel {
+	right: 0 !important;
+	top: 43px !important;
+}
+#toplevel_page_leform .wp-menu-image {
+	background: url(../images/icon.png) 50% 50% no-repeat;
+	background-size: contain;
+	height: 26px !important;
+}
+/* Table List - begin */
+.leform-table-list-buttons {
+	text-align: right;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	float: right;
+	position: relative;
+}
+.leform-pageswitcher {
+	margin-right: 200px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	float: left;
+}
+.leform-table-list-pages>span>a {
+	display: inline-block;
+	line-height: 25px;
+	border: 1px solid #ccc;
+	text-align: center;
+	min-width: 20px;
+	border-radius: 3px;
+	text-decoration: none !important;
+	color: #23282d;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	transition-duration: .3s;
+	-webkit-transition-duration: .3s;
+	outline: none !important;
+	box-shadow: none !important;
+	font-size: 13px;
+	padding: 0 0.2em;
+}
+.leform-table-list-pages>span>a:hover {
+	color: #fff !important;
+	background: var(--primary-color) !important;
+	border: 1px solid var(--primary-color) !important;
+}
+.leform-table-list-pages>span>a.leform-table-list-page-active {
+	color: #fff;
+	background: var(--primary-color);
+	border: 1px solid var(--primary-color);
+}
+.leform-table-list {
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 10px;
+	border: 1px solid #e5e5e5;
+	box-shadow: 0 1px 1px rgba(0,0,0,.04);
+	background: #fff;
+}
+.leform-table-list tr:nth-child(even) {
+	background-color: #f9f9f9;
+}
+.leform-table-list th {
+	font-size: 14px;
+	text-align: left;
+	font-weight: 400;
+	border-bottom: 1px solid #e1e1e1;
+	vertical-align: middle;
+	padding: 0.5em 1em 0.5em 1em;
+}
+.leform-table-list td {
+	font-size: 14px;
+	text-align: left;
+	font-weight: 400;
+	vertical-align: middle;
+	padding: 0.7em 1em 0.7em 1em;
+}
+.leform-table-list .leform-table-list-column-shortcode div {
+	display: block;
+	margin-right: 32px;
+	height: 32px;
+}
+.leform-table-list .leform-table-list-column-shortcode input, .leform-using-page input[type="text"] {
+	font-family: courier;
+	font-size: 12px;
+	line-height: 1em;
+	border: 1px solid #ccc !important;
+	outline: none !important;
+	box-shadow: none !important;
+	border-radius: 3px;
+	height: 100%;
+	width: 100%;
+	padding: 0.7em 0.8em;
+	border-spacing: 0;
+	box-sizing: border-box;
+	margin: 0;
+	background-color: #eee;
+	color: #32373c;
+}
+.leform-table-list .leform-table-list-column-shortcode span {
+	float: right;
+	display: block;
+	width: 32px;
+	line-height: 32px;
+	font-size: 18px;
+	text-align: center;
+	color: #888;
+	cursor: pointer;
+	transition: color 0.3s;
+	-webkit-transition: color 0.3s;
+}
+.leform-table-list .leform-table-list-column-shortcode span:hover {
+	color: var(--primary-color);
+}
+.leform-table-list .leform-table-list-column-shortcode span:active {
+	transform: translateY(2px);
+	-webkit-transform: translateY(2px);
+}
+.leform-table-list .leform-table-list-column-shortcode span i {
+	vertical-align: middle;
+}
+.leform-table-list a {
+	border: none !important;
+	outline: none !important;
+	box-shadow: none !important;
+}
+.leform-table-list-created {
+	font-size: 12px;
+	line-height: 1.4;
+	color: #ccc;
+	display: block;
+	font-style: italic;
+	cursor: default;
+}
+.leform-table-list-actions {
+	position: relative;
+	text-align: right;
+}
+.leform-table-list-actions>span {
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+	line-height: 32px;
+	font-size: 21px;
+	color: #888;
+	cursor: pointer;
+	border: 1px solid transparent;
+	text-align: center;
+	transition-duration: .3s;
+	-webkit-transition-duration: .3s;
+
+}
+.leform-table-list-actions:hover>span {
+	color: #fff;
+	background: var(--primary-color);
+	border: 1px solid var(--primary-color);
+}
+.leform-table-list-menu {
+	position: absolute;
+	z-index: 9999999;
+	top: 31px;
+	right: 0px;
+	display: none;
+	background: #fff;
+	border: 1px solid #c0c0c0;
+	box-sizing: border-box;
+	width: 200px;
+	box-shadow: 2px 2px 10px -5px rgba(0,0,0,0.9);
+}
+.leform-table-list-actions:hover .leform-table-list-menu {
+	display: block;
+}
+.leform-table-list-menu ul {
+	white-space: nowrap;
+	overflow: hidden;
+	display: block;
+	height: auto;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+    max-height: 230px;
+    overflow: auto;
+}
+.leform-table-list-menu ul li {
+	text-align: left;
+	position: relative;
+	height: 32px;
+	display: block;
+	line-height: 32px;
+	letter-spacing: normal;
+	background-color: transparent;
+	font-family: arial;
+	color: #2f353b;
+	font-size: 13px;
+	margin: 0;
+}
+.leform-table-list-menu ul li.leform-table-list-menu-line {
+	height: 1px;
+	display: block;
+	line-height: 1px;
+	background-color: #e0e0e0;
+	margin: 0;
+}
+.leform-table-list-menu ul li a {
+	display: block;
+	color: #2f353b;
+	cursor: pointer !important;
+	text-decoration: none !important;
+	box-shadow: none !important;
+	outline: none !important;
+	padding: 0 1em;
+}
+.leform-table-list-menu ul li:hover a {
+	color: var(--primary-color);
+	background: #f8f8f8;
+}
+.leform-table-list-menu ul li a i {
+	width: 1em;
+	margin-right: 0.5em;
+}
+.leform-column-settings {
+	position: relative;
+	text-align: right;
+}
+.leform-column-settings>span {
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+	line-height: 32px;
+	font-size: 18px;
+	color: #888;
+	cursor: pointer;
+	border: 1px solid transparent;
+	border-radius: 3px;
+	text-align: center;
+	transition-duration: .3s;
+	-webkit-transition-duration: .3s;
+
+}
+.leform-column-settings:hover>span {
+	background: rgba(0,0,0,0.05);
+	border: 1px solid rgba(0,0,0,0.2);
+}
+.leform-column-menu {
+	position: absolute;
+	z-index: 9999999;
+	top: 31px;
+	right: 0px;
+	display: none;
+	background: #fff;
+	border: 1px solid #c0c0c0;
+	box-sizing: border-box;
+	width: 200px;
+	box-shadow: 2px 2px 10px -5px rgba(0,0,0,0.9);
+}
+.leform-column-settings:hover .leform-column-menu {
+	display: block;
+}
+.leform-column-menu ul {
+	white-space: nowrap;
+	overflow: hidden;
+	display: block;
+	height: auto;
+	list-style: none;
+	margin: 0;
+	padding: 0.5em 0em;
+}
+.leform-column-menu ul li {
+	text-align: left;
+	position: relative;
+	height: 32px;
+	display: block;
+	line-height: 32px;
+	letter-spacing: normal;
+	background-color: transparent;
+	font-family: arial;
+	color: #2f353b;
+	font-size: 13px;
+	margin: 0;
+	padding: 0 1em;
+}
+.leform-column-menu ul li.leform-column-menu-line {
+	height: 1px;
+	display: block;
+	line-height: 1px;
+	background-color: #e0e0e0;
+	margin: 0;
+}
+.leform-column-menu ul li input+label+label {
+	display: inline-block;
+	margin-left: 0.5em;
+}
+.leform-column-menu ul li a {
+	display: block;
+	color: #2f353b;
+	cursor: pointer !important;
+	text-decoration: none !important;
+	box-shadow: none !important;
+	outline: none !important;
+	padding: 0 1em;
+}
+.leform-column-menu ul li:hover a {
+	color: var(--primary-color);
+	background: #f8f8f8;
+}
+.leform-column-menu ul li a i {
+	width: 1em;
+	margin-right: 0.5em;
+}
+/* Table List - end */
+
+.leform-badge {
+	display: inline-block;
+	padding: 0px 5px;
+	margin: 0 0.5em;
+	font-size: 11px;
+	font-family: arial;
+	text-transform: uppercase;
+	line-height: 1.6;
+	color: #FFFFFF;
+}
+.leform-badge-danger {
+	background-color: #C02020;
+}
+.leform-badge-info {
+	background-color: #5DB0BF;
+}
+.leform-badge-success {
+	background-color: #208020;
+}
+#leform-import-form, #leform-import-style-form {
+	display: none;
+}
+#leform-import-style-iframe {
+	display: none;
+}
+#leform-preview-overlay {
+	z-index: 100000;
+}
+#leform-preview {
+	z-index: 100001;
+	transition-property: transform, width;
+	transition-timing-function: ease-in-out;
+	transition-duration: 300ms;
+}
+#leform-preview .leform-admin-popup-content {
+	overflow-y: hidden;
+}
+#leform-preview-iframe {
+	width: 100%;
+	border: none;
+	margin: 0;
+	display: block !important;
+}
+.leform-using-page li {
+	margin-bottom: 10px;
+}
+.leform-error {
+	background: #dd3d36 !important;
+	color: #FFF !important;
+}
+.leform-error a, .leform-error-plugins-list a {
+	color: #FFF !important;
+	text-decoration: underline;
+}
+@-webkit-keyframes leform-error-animated {
+	0%, 50%, 100% {opacity: 1;}
+	25%, 75% {opacity: 0.5;}
+}
+@keyframes leform-error-animated {
+	0%, 50%, 100% {opacity: 1;}
+	25%, 75% {opacity: 0.5;}
+}
+.leform-error-animated {
+	-webkit-animation-duration: 3s;
+	animation-duration: 3s;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	-webkit-animation-name: leform-error-animated;
+	animation-name: leform-error-animated;
+	animation-iteration-count: 100;
+	animation-timing-function: ease-out;
+}
+
+/* Gutenberg Blocks - begin */
+.editor-block-list-item-leform-form .editor-block-icon {
+	background: url(../images/icon.png) 0 0 no-repeat;
+	background-size: contain;
+}
+.leform-block-form {
+	display: flex;
+	flex-direction: row;
+	padding: 20px;
+	border: 2px dashed green;
+	border-radius: 8px;
+}
+.leform-block-form-label-icon {
+	display: flex;
+	vertical-align: top;
+	cursor: default;
+	line-height: 36px;
+	height: 36px;
+	width: 40px;
+	background: url(../images/icon.png) 0 0 no-repeat;
+	background-size: contain;
+}
+.leform-block-form-label {
+	vertical-align: top;
+	line-height: 32px;
+	display: flex;
+	margin-top: 4px;
+	font-size: 14px;
+	margin: 4px 8px 0 8px;
+	white-space: nowrap;
+}
+select.leform-block-form-value {
+	vertical-align: top;
+	line-height: 36px !important;
+	display: flex;
+	width: 100%;
+	font-size: 14px !important;
+	height: 36px;
+}
+/* Gutenberg Blocks - end */
+
+/* Field Analytics - begin */
+.leform-field-analytics-noform {
+	text-align: center;
+	margin-top: 60px;
+}
+.leform-field-analytics-columns {
+}
+.leform-field-analytics-columns>div {
+	float: left;
+	box-sizing: border-box;
+	width: 49%;
+	padding: 10px;
+}
+.leform-field-analytics-chart-box {
+	margin-bottom: 32px;
+}
+/* Field Analytics - end */
+
+/* Get Started - begin */
+.leform-gettingstarted-overlay {
+	position: fixed;
+	z-index: 1000000;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	height: 100%;
+	width: 100%;
+	background-position: center center;
+	background: rgba(0,0,0,0.9);
+	display: none;
+}
+.leform-gettingstarted-highlight {
+	display: block;
+	position: relative;
+	z-index: 1000001;
+	overflow: visible;
+}
+.leform-gettingstarted-highlight::after {
+	content: ' ';
+	position: absolute;
+	z-index: 1000002;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	height: 100%;
+	width: 100%;
+}
+.leform-gettingstarted-bubble {
+	box-sizing: border-box;
+	position: absolute;
+	z-index: 1000003;
+	line-height: 1.4;
+	text-align: center !important;
+	display: none;
+}
+.leform-gettingstarted-bubble p {
+	font-size: 18px;
+	font-weight: 100;
+	font-family: arial;
+	color: #ffffff;
+	padding: 0;
+	margin: 0;
+	text-align: left;
+	text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+}
+.leform-gettingstarted-bubble-bottom-left {
+	background: transparent url(../images/arrow-bottom-left.png) 0px 0px no-repeat;
+	padding: 50px 0 0 90px;
+	left: 0;
+}
+.leform-gettingstarted-bubble-bottom-right {
+	background: transparent url(../images/arrow-bottom-right.png) 100% 0px no-repeat;
+	padding: 50px 90px 0 0;
+	right: 0;
+}
+.leform-gettingstarted-bubble-left {
+	background: transparent url(../images/arrow-left.png) 0px 0px no-repeat;
+	padding: 30px 0 0 120px;
+	left: 0;
+}
+.leform-gettingstarted-bubble span {
+	font-size: 18px;
+	font-weight: 100;
+	font-family: arial;
+	color: #ffffff;
+	cursor: pointer;
+	display: inline-block;
+	padding: 8px 30px;
+	line-height: 1.4;
+	border: 2px solid #ffffff;
+	border-radius: 5px;
+	margin-top: 10px;
+	transition-property: background, color;
+	transition-duration: 0.3s;
+	text-shadow: none;
+}
+.leform-gettingstarted-bubble span:hover {
+	background: #ffffff;
+	color: #000000;
+	text-shadow: none;
+}
+.leform-signature-view {
+	background: transparent url(../images/builder-bg-light-2.png) 0 0 repeat;
+	max-width: 100%;
+}
+.leform-admin .ui-slider { position: relative; text-align: left; border-radius: 4px;}
+.leform-admin .ui-slider .ui-slider-handle { position: absolute; z-index: 2; width: 1.2em; height: 1.2em; cursor: default; border-radius: 4px;}
+.leform-admin .ui-slider .ui-slider-range { position: absolute; z-index: 1; font-size: .7em; display: block; border: 0; background-position: 0 0; }
+.leform-admin .ui-slider-horizontal { height: .8em; }
+.leform-admin .ui-slider-horizontal .ui-slider-handle { top: -.3em; margin-left: -.6em; }
+.leform-admin .ui-slider-horizontal .ui-slider-range { top: 0; height: 100%; }
+.leform-admin .ui-slider-horizontal .ui-slider-range-min { left: 0; }
+.leform-admin .ui-slider-horizontal .ui-slider-range-max { right: 0; }
+
+.leform-admin .ui-slider-vertical { width: .8em; height: 100px; }
+.leform-admin .ui-slider-vertical .ui-slider-handle { left: -.3em; margin-left: 0; margin-bottom: -.6em; }
+.leform-admin .ui-slider-vertical .ui-slider-range { left: 0; width: 100%; }
+.leform-admin .ui-slider-vertical .ui-slider-range-min { bottom: 0; }
+.leform-admin .ui-slider-vertical .ui-slider-range-max { top: 0; }
+
+.leform-number-icon:before {
+	content: "42";
+	font-size: 100%;
+	font-family: verdana;
+}
+.leform-numspinner-minus,
+.leform-numspinner-plus {
+	cursor: pointer;
+}
+.leform-numspinner-minus:before,
+.leform-numspinner-plus:before {
+	font-size: 12px;
+}
+.leform-tile-icon:before {
+	display: inline-block;
+	content: "tile";
+	font-size: 70%;
+	font-family: verdana;
+	border: 1px solid #444;
+	border-radius: 3px;
+	line-height: 1;
+	padding: 0.1em 0.3em;
+	vertical-align: middle;
+	box-shadow: 0 0 1px 1px rgba(0,0,0,0.05);
+}
+.leform-email-validator-options {
+	display: none;
+}
+.leform-toolbars {
+	position: absolute;
+	left: 0;
+	right: 0;
+}
+.leform-form-editor {
+	position: relative;
+}
+html.leform-toolbars-fixed .leform-toolbars {
+	position: fixed;
+	z-index: 1000;
+	top: 0;
+	left: unset !important;
+	right: unset !important;
+}
+html.wp-toolbar.leform-toolbars-fixed .leform-toolbars {
+	top: 32px;
+}
+html.wp-toolbar .leform-toolbar-tooltipster {
+	margin-top: -32px;
+}
+html.wp-toolbar.leform-toolbars-fixed .leform-toolbar-tooltipster {
+	margin-top: 0;
+}
+@media screen and (max-width: 782px) {
+	html.wp-toolbar.leform-toolbars-fixed .leform-toolbars {
+		top: 46px;
+	}
+	html.wp-toolbar .leform-toolbar-tooltipster {
+		margin-top: -46px;
+	}
+	html.wp-toolbar.leform-toolbars-fixed .leform-toolbar-tooltipster {
+		margin-top: 0;
+	}
+}
+@media screen and (max-width: 600px) {
+	html.wp-toolbar.leform-toolbars-fixed .leform-toolbars {
+		top: 0px;
+	}
+	html.wp-toolbar .leform-toolbar-tooltipster {
+		margin-top: 0px;
+	}
+}
+
+body {
+    min-width: auto;
+}

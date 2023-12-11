@@ -1,0 +1,23 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+:root {
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  --primary-color: #008ee8;
+  --primary-color-darker: #007ecc;
+}
+.w-100 {
+  width: 100%;
+}
+
+.bg-primary-color {
+	background: var(--primary-color);
+}
+
+.signature-pad {
+	background: #fff url('/images/signature-pad-bg.png');
+	border-radius: 20px;
+}

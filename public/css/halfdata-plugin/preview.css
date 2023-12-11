@@ -1,0 +1,123 @@
+body {
+	margin: 0;
+	padding: 64px 0 20px 0;
+	font-family: arial;
+	font-size: 15px;
+	color: #444;
+}
+.leform-pages-bar {
+//	height: 48px;
+	line-height: 48px;
+	background: #fcfcfc;
+	border-bottom: 1px solid #f0f0f0;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 2;
+}
+.leform-pages-bar-items {
+	height: auto;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+.leform-pages-bar-items::after {
+	display: table;
+	content: ' ';
+	clear: both;
+}
+.leform-pages-bar-items>li {
+	position: relative;
+	height: 48px;
+	line-height: 48px;
+	margin: 0;
+	padding: 0 1em;
+	border-right: 1px solid #f0f0f0;
+//	outline: 1px solid #f0f0f0;
+	background: transparent;
+	float: left;
+	cursor: default;
+	transition-property: background;
+	-webkit-transition-property: background;
+	transition-duration: .3s;
+	-webkit-transition-duration: .3s;
+}
+.leform-pages-bar-items>li:hover {
+	background: #f4f4f4;
+}
+.leform-pages-bar-item-placeholder {
+	border-right: 1px solid #d4d4d4;
+}
+.leform-pages-bar-item-helper {
+	border: 1px solid #d4d4d4 !important;
+}
+.leform-pages-bar-items>li label {
+	line-height: inherit;
+	display: inline-block;
+	vertical-align: top;
+	overflow: hidden;
+	//max-width: 120px;
+	cursor: pointer;
+	margin-bottom: 0;
+	font-weight: 400;
+}
+.leform-pages-bar-items>li span {
+	display: inline-block;
+	line-height: inherit;
+	vertical-align: top;
+	transition-property: width;
+	-webkit-transition-property: width;
+	transition-duration: .2s;
+	-webkit-transition-duration: .2s;
+	overflow: hidden;
+	width: 0;
+	text-align: right;
+	cursor: pointer;
+}
+.leform-pages-bar-items>li.leform-pages-bar-item-active,
+.leform-pages-bar-items>li.leform-pages-bar-item-active.leform-pages-bar-item-confirmation {
+	border-bottom: 3px solid #169F85;
+}
+.leform-pages-bar-items>li.leform-pages-bar-item-helper span,
+.leform-pages-bar-items>li.leform-pages-bar-item-active span,
+.leform-pages-bar-items>li:hover span {
+	width: 56px;
+}
+.leform-pages-bar-items>li.leform-pages-bar-item-helper.leform-pages-bar-item-confirmation span,
+.leform-pages-bar-items>li.leform-pages-bar-item-active.leform-pages-bar-item-confirmation span,
+.leform-pages-bar-items>li.leform-pages-bar-item-confirmation:hover span {
+	width: 32px;
+}
+.leform-pages-bar-items>li span a, .leform-pages-bar-items>li span a:visited {
+	display: inline-block;
+	font-size: 20px;
+	margin-left: 0.4em;
+	color: #666;
+	outline: none !important;
+	border: none !important;
+	box-shadow: none !important;
+	text-decoration: none !important;
+}
+.leform-pages-bar-items>li span a:hover i, .leform-pages-bar-items>li span a:active i {
+	color: #169F85;
+}
+.leform-pages-bar-items>li span a i {
+	line-height: inherit;
+	vertical-align: top;
+	transition-property: color;
+	-webkit-transition-property: color;
+	transition-duration: .3s;
+	-webkit-transition-duration: .3s;
+}
+.leform-pages-bar-items>li span a:hover i.fa-trash, .leform-pages-bar-items>li span a:active i.fa-trash {
+	color: #E04000;
+}
+.leform-pages-bar-items>li span a i.fa-trash{
+	font-size: 16px;
+}
+.leform-pages-bar-item-delete-disabled i {
+	color: #ccc !important;
+	cursor: default !important;
+}
